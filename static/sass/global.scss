@@ -1,14 +1,55 @@
-@import 'static/sass/utilities.scss'
+@import 'static/sass/utilities.scss';
+@import 'smacss.scss';
 
 body {
   height: 100%;
   font-size: 14px;
+  background-color: $color-background !important;
+  font-family: 'Dosis', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
 
   .ant-layout {
     height: 100vh !important;
 
     .ant-content {
       background-color: $color-white;
+    }
+  }
+
+  .owl-item {
+    margin: 0 !important;
+  }
+}
+
+.zg-product{
+  margin: 80px auto;
+
+  &--header {
+    justify-content: center;
+
+    span {
+      text-transform: uppercase;
+      line-height: 33px;
+      padding: 0 25px;
+      border-left: 3px solid $color-semi;
+      border-right: 3px solid $color-semi;
+      font-weight: bold;
+      color: $color-title;
+      font-size: 42px;
+    }
+  }
+
+  &--description {
+    @extend .zg-product--header;
+
+    span {
+      margin-top: 15px;
+      font-size: 18px;
+      text-transform: none;
+      font-style: italic;
+      font-family: 'Lato', sans-serif;
+      border: none;
     }
   }
 }

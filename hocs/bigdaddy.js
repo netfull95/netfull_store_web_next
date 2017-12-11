@@ -22,6 +22,12 @@ const bigdaddy = OurChildComponent => {
             <title>{OurChildComponent.info.title}</title>
             <link href="/static/css/antd.min.2.13.9.css" rel="stylesheet" />
             <link href="/static/dist/global.css" rel="stylesheet" />
+            <link rel="stylesheet" href="static/css/owl.carousel.min.css" />
+            <link rel="stylesheet" href="static/css/animate.css" />
+            <link rel="stylesheet" href="static/css/owl.theme.default.min.css" />
+            <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css?family=Lato:400,400italic" rel="stylesheet" />
+            <link rel="stylesheet" href="static/css/font-awesome.min.css" />
           </Head>
           <LocaleProvider locale={vi}>
             <MainLayout>
@@ -29,6 +35,8 @@ const bigdaddy = OurChildComponent => {
             </MainLayout>
           </LocaleProvider>
           <style dangerouslySetInnerHTML={{ __html: OurChildComponent.info.style }} />
+          <script src="static/js/jquery-3.2.1.min.js"></script>
+          <script src="static/js/owl.carousel.min.js"></script>
         </div>
       )
     }
