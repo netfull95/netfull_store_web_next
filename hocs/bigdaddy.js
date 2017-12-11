@@ -22,6 +22,8 @@ const bigdaddy = OurChildComponent => {
             <title>{OurChildComponent.info.title}</title>
             <link href="/static/css/antd.min.2.13.9.css" rel="stylesheet" />
             <link href="/static/dist/global.css" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" />
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
           </Head>
           <LocaleProvider locale={vi}>
             <MainLayout>
