@@ -104,3 +104,100 @@ body {
     width: 25%;
   }
 }
+
+.zg-subfee {
+  display: flex;
+
+  &--title {
+    h1 {
+      font-weight: 800;
+      font-size: 42px;
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #555555;
+    }
+    margin-bottom: 20px !important;
+    font-weight: 600px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &--center-block {
+    max-width: 500px;
+    position: absolute;
+    top: 30%;
+    right: 85px;
+    width: 100%;
+  }
+
+  &--form {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+    position: relative !important;
+
+    i {
+      position: absolute;
+      right: 15px;
+      top: 12px;
+      color: #cccccc;
+      font-size: 20px;
+    }
+
+    input {
+      width: 100%;
+      height: 45px;
+      border: 1px solid #eeeeee;
+      border-radius: 1px;
+      padding: 0 10px;
+    }
+  }
+
+  &--subscribe {
+    height: 340px;
+
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+
+  &--wrapper {
+    padding: 60px 9%;
+
+    i {
+      position: absolute;
+      font-size: 65px;
+      top: 60px;
+      left: 60px;
+      color: #f2f2f2;
+    }
+  }
+
+  &--detail {
+
+    img {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      margin: auto;
+    }
+  }
+
+  &--subscribe-image {
+    background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/bg_mailchip.jpg?id=166) !important;
+  }
+
+  &--feedback-image {
+    background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/bg_test2.jpg?id=726);
+  }
+
+  &--feedback {
+
+  }
+}
