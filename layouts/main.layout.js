@@ -12,7 +12,7 @@ class MainLayout extends Component {
         <div className="header">
           <img src="/static/images/zeit.png" height="45px" width="auto" />
           <div className="header-menu">
-            <Link href="/home">
+            <Link href="/">
               <a className="menu-item">home</a>
             </Link>
             <Link href="/blog">
