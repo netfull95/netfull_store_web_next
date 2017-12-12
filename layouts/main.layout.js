@@ -83,7 +83,7 @@ class MainLayout extends Component {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
             <img src="/static/images/payment_logo.png" />
-            <div style={{ fontSize: 14, color: '#888888', margin: '20px 0 50px 0' }}>@ 2015. Designed</div>
+            <div style={{ fontSize: 14, color: '#888888', margin: '20px 0 50px 0' }}>@ 2017. Designed by Zeiget</div>
           </div>
         </div>
         <style dangerouslySetInnerHTML={{ __html: style }} />
