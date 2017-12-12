@@ -11,8 +11,8 @@ class Blog extends Component {
     style
   }
 
-  renderBlog = item => (
-    <div className="blog-card">
+  renderBlog = (item, index) => (
+    <div className="blog-card" key={index}>
       <div className="content-featured">
         <img width={870} height="auto" src={item.src} />
       </div>
@@ -32,13 +32,13 @@ class Blog extends Component {
             <div className="blog-head-content">
               <h1 className="title">Blog</h1>
               <p>Each week, we bring you something a little bit different from the last news</p>
-              <a style={{ color: '#fff' }}><i className="fa fa-home" /> Home</a>
+              <Link href="/"><a style={{ color: '#fff' }}><i className="fa fa-home" /> Home</a></Link>
             </div>
           </div>
         </section>
         <div className="blog-container">
           <div className="blog-list">
-            {blogs.map(item => this.renderBlog(item))}
+            {blogs.map((item, index) => this.renderBlog(item, index))}
             <div className="pagination">
               <span className="page-numbers current">1</span>
               <a className="page-numbers">2</a>
@@ -86,8 +86,8 @@ class Blog extends Component {
             </div>
             <div className="item blog-tags">
               <h4>blog tag</h4>
-              <div class="tagcloud">
-                <a href="http://wp.nootheme.com/umbra/tag/accessories/" class="tag-link">accessories</a>
+              <div>
+                <a href="http://wp.nootheme.com/umbra/tag/accessories/" className="tag-link">accessories</a>
                 <a href="http://wp.nootheme.com/umbra/tag/bags/" className="tag-link">bags</a>
                 <a href="http://wp.nootheme.com/umbra/tag/bedroom/" className="tag-link">Bedroom</a>
                 <a href="http://wp.nootheme.com/umbra/tag/crafts/" className="tag-link">crafts</a>
@@ -105,7 +105,7 @@ class Blog extends Component {
               <h4>instagram photos</h4>
               <div className="image-list"><ul>
                 {igImages.map(item => (
-                  <li style={{ width: 75, height: 75 }}><a><img src={item} width={75} height={75} /></a></li>
+                  <li key={item} style={{ width: 75, height: 75 }}><a><img src={item} width={75} height={75} /></a></li>
                 ))}
               </ul></div>
             </div>

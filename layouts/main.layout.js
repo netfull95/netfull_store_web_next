@@ -6,10 +6,34 @@ import Link from 'next/link'
 import style from './main.scss'
 
 class MainLayout extends Component {
+
+  handleScroll = () => {
+    const header = document.getElementById('header')
+    const mark = document.getElementById('header-mark')
+    if (header.getBoundingClientRect().top <= -100) {
+      header.className = 'header header-fixed'
+      mark.style.display = 'block'
+    }
+
+    if (mark.getBoundingClientRect().top == 0) {
+      header.className = 'header'
+      mark.style.display = 'none'
+      header.style.top = '-85px'
+    }
+
+    if (mark.getBoundingClientRect().top < -120) {
+      header.style.top = '0px';
+    }
+  }
+
+  componentDidMount() {
+    $(window).scroll(this.handleScroll)
+  }
+
   render() {
     return (
       <div className="layout">
-        <div className="header">
+        <div className="header" id="header">
           <img src="/static/images/zeit.png" height="45px" width="auto" />
           <div className="header-menu">
             <Link href="/">
@@ -36,6 +60,7 @@ class MainLayout extends Component {
           </div>
         </div>
         <div>
+          <div id="header-mark" style={{ height: 85, display: 'none' }} />
           {this.props.children}
         </div>
         <div className="footer-container">

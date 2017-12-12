@@ -1,14 +1,21 @@
 @import 'static/sass/utilities.scss';
 
 .layout {
-  height: 100vh;
-  overflow: auto;
   background-color: $color-background;
   font-size: 17px;
   line-height: 1.4;
   font-family: 'Lato',sans-serif;
 
+  .header-fixed {
+    position: fixed;
+    top: -85px;
+    width: 100%;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    transition:0.4s top cubic-bezier(.3, .73, .3, .74);
+  }
+
   .header {
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     padding: 20px 30px;
@@ -89,20 +96,27 @@
     }
   }
 
+  .footer-container {
+    background: $color-white;
+  }
+
   .footer {
-    width: 70vw;
-    margin: 50px auto 30px auto;
+    width: 100%;
+    padding: 30px 0 30px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
 
     .footer-item {
-      width: 20%;
+      margin-top: 20px;
+      width: 300px;
+      margin-right: 15px;
 
       .title {
         text-transform: uppercase;
         font-size: 24px;
         letter-spacing: 0.5px;
-        line-height: 0.8;
+        line-height: 1;
         margin-bottom: 50px;
         margin-top: 0;
         padding-left: 10px;
@@ -186,8 +200,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 * {
-  -webkit-transition: all 0.2s ease;
-  -moz-transition:    all 0.2s ease;
-  -ms-transition:     all 0.2s ease;
-  -o-transition:      all 0.2s ease;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition:    all 0.4s ease 0s;
+  -ms-transition:     all 0.4s ease 0s;
+  -o-transition:      all 0.4s ease 0s;
 }
