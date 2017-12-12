@@ -2,8 +2,7 @@
 @import 'smacss.scss';
 
 body {
-  height: 100%;
-  font-size: 14px;
+
   background-color: $color-background !important;
   font-family: 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,7 +21,7 @@ body {
 
   &--item {
     position: relative;
-    height: 500px !important;
+    height: 450px !important;
     display: flex;
     flex-direction: column;
     width: 30% !important;
@@ -81,5 +80,27 @@ body {
       font-family: 'Lato', sans-serif;
       border: none;
     }
+  }
+}
+
+.zg-grid {
+  &--item {
+    img {
+      display: block;
+      width: 100%;
+      max-width: none;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  @media screen and (max-width: 990px) {
+    &__half { width: 50% !important; }
+    &__sizer {
+      width: 50% !important;
+    }
+  }
+  &__half { width: 50% }
+  &__sizer {
+    width: 25%;
   }
 }

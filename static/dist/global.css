@@ -154,16 +154,11 @@
   margin: auto; }
 
 body {
-  height: 100%;
-  font-size: 14px;
   background-color: #f8f8f8 !important;
   font-family: 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px; }
-  body .ant-layout {
-    height: 100vh !important; }
-    body .ant-layout .ant-content {
-      background-color: #fff; }
+  font-size: 16px;
+  overflow: hidden !important; }
 
 .zg-product {
   margin: 80px auto; }
@@ -173,7 +168,7 @@ body {
     margin-top: 20px; }
   .zg-product--item {
     position: relative;
-    height: 500px !important;
+    height: 450px !important;
     display: flex;
     flex-direction: column;
     width: 30% !important;
@@ -216,3 +211,22 @@ body {
     font-style: italic;
     font-family: 'Lato', sans-serif;
     border: none; }
+
+.zg-grid--item img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover; }
+
+@media screen and (max-width: 990px) {
+  .zg-grid__half {
+    width: 50% !important; }
+  .zg-grid__sizer {
+    width: 50% !important; } }
+
+.zg-grid__half {
+  width: 50%; }
+
+.zg-grid__sizer {
+  width: 25%; }

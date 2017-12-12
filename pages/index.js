@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Icon } from 'antd'
 
+import SectionGridImages from 'components/SectionGridImages'
 import SectionBanners from 'components/SectionBanners'
 import SectionProductListItem from 'components/SectionProductListItem'
 import Notification from 'components/Notification'
@@ -44,6 +45,7 @@ class Index extends React.Component {
         </div>
 
         <SectionBanners />
+        <SectionGridImages />
         <SectionProductListItem />
 
       </div>
