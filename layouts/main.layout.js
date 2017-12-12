@@ -12,19 +12,19 @@ class MainLayout extends Component {
         <div className="header">
           <img src="/static/images/zeit.png" height="45px" width="auto" />
           <div className="header-menu">
-            <Link>
+            <Link href="/home">
               <a className="menu-item">home</a>
             </Link>
-            <Link>
+            <Link href="/blog">
               <a className="menu-item">blog</a>
             </Link>
-            <Link>
+            <Link href="/shop">
               <a className="menu-item">shop</a>
             </Link>
-            <Link>
+            <Link href="/pages">
               <a className="menu-item">pages</a>
             </Link>
-            <Link>
+            <Link href='/contact'>
               <a className="menu-item">contact</a>
             </Link>
           </div>
@@ -32,6 +32,7 @@ class MainLayout extends Component {
             <i className="fa fa-search" />
             <i className="fa fa-heart-o" />
             <i className="fa fa-shopping-bag" />
+            <span className="mention">0</span>
           </div>
         </div>
         <div>
