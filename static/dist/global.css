@@ -157,8 +157,7 @@ body {
   background-color: #f8f8f8 !important;
   font-family: 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
-  overflow: hidden !important; }
+  font-size: 16px; }
 
 .zg-product {
   margin: 80px auto; }
