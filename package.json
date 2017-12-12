@@ -4,10 +4,6 @@
   "description": "A simple react + next example app. A boilerplate for server side rendering with react and nextjs",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "scripts": {
     "build": "next build",
     "build-scss": "node-sass static/sass/global.scss static/dist/global.css",
     "build-scss:watch": "node-sass -w static/sass/ -o static/dist/",
@@ -36,7 +32,8 @@
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "shufflejs": "^5.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",

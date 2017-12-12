@@ -2,8 +2,7 @@
 @import 'smacss.scss';
 
 body {
-  height: 100%;
-  font-size: 14px;
+
   background-color: $color-background !important;
   font-family: 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,7 +21,7 @@ body {
 
   &--item {
     position: relative;
-    height: 500px !important;
+    height: 450px !important;
     display: flex;
     flex-direction: column;
     width: 30% !important;
@@ -59,6 +58,7 @@ body {
     justify-content: center;
 
     span {
+      font-family: 'Dosis',sans-serif;
       text-transform: uppercase;
       line-height: 33px;
       padding: 0 25px;
@@ -80,6 +80,182 @@ body {
       font-style: italic;
       font-family: 'Lato', sans-serif;
       border: none;
+    }
+  }
+}
+
+.zg-grid {
+  &--item {
+    img {
+      display: block;
+      width: 100%;
+      max-width: none;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  @media screen and (max-width: 990px) {
+    &__half { width: 50% !important; }
+    &__sizer {
+      width: 50% !important;
+    }
+  }
+  &__half { width: 50% }
+  &__sizer {
+    width: 25%;
+  }
+}
+
+.zg-subfee {
+  display: flex;
+
+  &--title {
+    h1 {
+      font-weight: 800;
+      font-size: 42px;
+    }
+    h3 {
+      margin-top: 15px;
+      font-family: 'Lato', sans-serif;
+      font-size: 20px;
+      font-weight: 500 !important;
+      color: #555555;
+    }
+    margin-bottom: 20px !important;
+    font-weight: 600px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &--center-block {
+    max-width: 500px;
+    position: absolute;
+    top: 30%;
+    right: 85px;
+    width: 100%;
+  }
+
+  &--form {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+    position: relative !important;
+
+    i {
+      position: absolute;
+      right: 15px;
+      top: 12px;
+      color: #cccccc;
+      font-size: 20px;
+    }
+
+    input {
+      width: 100%;
+      height: 45px;
+      border: 1px solid #eeeeee;
+      border-radius: 1px;
+      padding: 0 10px;
+    }
+  }
+
+  &--subscribe {
+    height: 340px;
+
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+
+  &--wrapper {
+    padding: 60px 9%;
+
+    i {
+      position: absolute;
+      font-size: 65px;
+      top: 60px;
+      left: 60px;
+      color: #f2f2f2;
+    }
+  }
+
+  &--detail {
+
+    img {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      margin: auto;
+    }
+  }
+
+  &--subscribe-image {
+    background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/bg_mailchip.jpg?id=166) !important;
+  }
+
+  &--feedback-image {
+    background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/bg_test2.jpg?id=726);
+  }
+
+  &--feedback {
+
+  }
+}
+
+
+.zg-gridpost {
+  margin: 85px;
+
+  &--row {
+    height: 358px;
+  }
+
+  &__image {
+    width: 50% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/556d0928028879.5636e8272c43b1111111.jpg)
+  }
+
+  &__text {
+    width: 50% !important;
+    background-color: $color-white;
+    float: right;
+    width: 50%;
+    padding: 73px 5% 80px;
+    text-align: center;
+
+    h4 {
+      color: $color-semi;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-family: 'Dosis', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      margin: 20px 0 30px;
+    }
+
+    p {
+      font-size: 15px;
+      font-family: 'Lato', sans-serif;
+      margin-bottom: 45px;
+    }
+  }
+
+  &--button {
+    padding: 10px 25px;
+    text-transform: uppercase;
+    border: 1px solid #eeeeee;
+    border-radius: 20px;
+
+    &:hover {
+      background-color: #eeeeee;
     }
   }
 }

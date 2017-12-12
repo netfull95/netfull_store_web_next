@@ -154,16 +154,11 @@
   margin: auto; }
 
 body {
-  height: 100%;
-  font-size: 14px;
   background-color: #f8f8f8 !important;
   font-family: 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 16px; }
-  body .ant-layout {
-    height: 100vh !important; }
-    body .ant-layout .ant-content {
-      background-color: #fff; }
+  font-size: 16px;
+  overflow: hidden !important; }
 
 .zg-product {
   margin: 80px auto; }
@@ -173,7 +168,7 @@ body {
     margin-top: 20px; }
   .zg-product--item {
     position: relative;
-    height: 500px !important;
+    height: 450px !important;
     display: flex;
     flex-direction: column;
     width: 30% !important;
@@ -201,6 +196,7 @@ body {
   .zg-product--header, .zg-product--description {
     justify-content: center; }
     .zg-product--header span, .zg-product--description span {
+      font-family: 'Dosis',sans-serif;
       text-transform: uppercase;
       line-height: 33px;
       padding: 0 25px;
@@ -216,3 +212,123 @@ body {
     font-style: italic;
     font-family: 'Lato', sans-serif;
     border: none; }
+
+.zg-grid--item img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover; }
+
+@media screen and (max-width: 990px) {
+  .zg-grid__half {
+    width: 50% !important; }
+  .zg-grid__sizer {
+    width: 50% !important; } }
+
+.zg-grid__half {
+  width: 50%; }
+
+.zg-grid__sizer {
+  width: 25%; }
+
+.zg-subfee {
+  display: flex; }
+  .zg-subfee--title {
+    margin-bottom: 20px !important;
+    font-weight: 600px;
+    -webkit-font-smoothing: antialiased; }
+    .zg-subfee--title h1 {
+      font-weight: 800;
+      font-size: 42px; }
+    .zg-subfee--title h3 {
+      margin-top: 15px;
+      font-family: 'Lato', sans-serif;
+      font-size: 20px;
+      font-weight: 500 !important;
+      color: #555555; }
+  .zg-subfee--center-block {
+    max-width: 500px;
+    position: absolute;
+    top: 30%;
+    right: 85px;
+    width: 100%; }
+  .zg-subfee--form {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+    position: relative !important; }
+    .zg-subfee--form i {
+      position: absolute;
+      right: 15px;
+      top: 12px;
+      color: #cccccc;
+      font-size: 20px; }
+    .zg-subfee--form input {
+      width: 100%;
+      height: 45px;
+      border: 1px solid #eeeeee;
+      border-radius: 1px;
+      padding: 0 10px; }
+  .zg-subfee--subscribe {
+    height: 340px; }
+  .zg-subfee__inner {
+    position: relative;
+    width: 100%;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; }
+  .zg-subfee--wrapper {
+    padding: 60px 9%; }
+    .zg-subfee--wrapper i {
+      position: absolute;
+      font-size: 65px;
+      top: 60px;
+      left: 60px;
+      color: #f2f2f2; }
+  .zg-subfee--detail img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: auto; }
+  .zg-subfee--subscribe-image {
+    background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/bg_mailchip.jpg?id=166) !important; }
+  .zg-subfee--feedback-image {
+    background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/bg_test2.jpg?id=726); }
+
+.zg-gridpost {
+  margin: 85px; }
+  .zg-gridpost--row {
+    height: 358px; }
+  .zg-gridpost__image {
+    width: 50% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/556d0928028879.5636e8272c43b1111111.jpg); }
+  .zg-gridpost__text {
+    width: 50% !important;
+    background-color: #fff;
+    float: right;
+    width: 50%;
+    padding: 73px 5% 80px;
+    text-align: center; }
+    .zg-gridpost__text h4 {
+      color: #d2a637;
+      text-transform: uppercase; }
+    .zg-gridpost__text h3 {
+      font-family: 'Dosis', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      margin: 20px 0 30px; }
+    .zg-gridpost__text p {
+      font-size: 15px;
+      font-family: 'Lato', sans-serif;
+      margin-bottom: 45px; }
+  .zg-gridpost--button {
+    padding: 10px 25px;
+    text-transform: uppercase;
+    border: 1px solid #eeeeee;
+    border-radius: 20px; }
+    .zg-gridpost--button:hover {
+      background-color: #eeeeee; }
