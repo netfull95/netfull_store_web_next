@@ -8,7 +8,7 @@ import style from './main.scss'
 class MainLayout extends Component {
   render() {
     return (
-      <Layout className="layout">
+      <div className="layout">
         <div className="header">
           <img src="/static/images/zeit.png" height="45px" width="auto" />
           <div className="header-menu">
@@ -34,9 +34,9 @@ class MainLayout extends Component {
             <i className="fa fa-shopping-bag" />
           </div>
         </div>
-        <Layout.Content>
+        <div>
           {this.props.children}
-        </Layout.Content>
+        </div>
         <div className="footer-container">
           <div className="footer">
             <div className="footer-item">
@@ -87,7 +87,7 @@ class MainLayout extends Component {
           </div>
         </div>
         <style dangerouslySetInnerHTML={{ __html: style }} />
-      </Layout>
+      </div>
     )
   }
 }

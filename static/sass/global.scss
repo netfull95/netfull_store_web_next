@@ -8,14 +8,7 @@ body {
   font-family: 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
-
-  .ant-layout {
-    height: 100vh !important;
-
-    .ant-content {
-      background-color: $color-white;
-    }
-  }
+  overflow: hidden !important;
 }
 
 .zg-product {
