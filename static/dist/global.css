@@ -196,6 +196,7 @@ body {
   .zg-product--header, .zg-product--description {
     justify-content: center; }
     .zg-product--header span, .zg-product--description span {
+      font-family: 'Dosis',sans-serif;
       text-transform: uppercase;
       line-height: 33px;
       padding: 0 25px;
@@ -294,3 +295,40 @@ body {
     background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/bg_mailchip.jpg?id=166) !important; }
   .zg-subfee--feedback-image {
     background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/bg_test2.jpg?id=726); }
+
+.zg-gridpost {
+  margin: 85px; }
+  .zg-gridpost--row {
+    height: 358px; }
+  .zg-gridpost__image {
+    width: 50% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/556d0928028879.5636e8272c43b1111111.jpg); }
+  .zg-gridpost__text {
+    width: 50% !important;
+    background-color: #fff;
+    float: right;
+    width: 50%;
+    padding: 73px 5% 80px;
+    text-align: center; }
+    .zg-gridpost__text h4 {
+      color: #d2a637;
+      text-transform: uppercase; }
+    .zg-gridpost__text h3 {
+      font-family: 'Dosis', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      margin: 20px 0 30px; }
+    .zg-gridpost__text p {
+      font-size: 15px;
+      font-family: 'Lato', sans-serif;
+      margin-bottom: 45px; }
+  .zg-gridpost--button {
+    padding: 10px 25px;
+    text-transform: uppercase;
+    border: 1px solid #eeeeee;
+    border-radius: 20px; }
+    .zg-gridpost--button:hover {
+      background-color: #eeeeee; }
