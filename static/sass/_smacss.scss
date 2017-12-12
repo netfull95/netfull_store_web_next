@@ -1,6 +1,7 @@
 @import 'static/sass/utilities.scss';
 
 // SMACSS definations
+
 .is {
   &-flex {
     display: flex !important;
@@ -105,6 +106,11 @@
 
     &-prev { left: 50px; }
     &-next { right: 50px; }
+  }
+
+  &-horizontal-res {
+    max-width: 1200px;
+    margin: auto;
   }
 // END SMACSS
 }

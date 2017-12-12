@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Icon } from 'antd'
 
+import SectionBanners from 'components/SectionBanners'
 import SectionProductListItem from 'components/SectionProductListItem'
 import Notification from 'components/Notification'
 import bigdaddy from 'hocs/bigdaddy'
@@ -42,6 +43,7 @@ class Index extends React.Component {
           <div><img src="http://wp.nootheme.com/umbra/wp-content/uploads/Home-V1-Slide-3.jpg" /></div>
         </div>
 
+        <SectionBanners />
         <SectionProductListItem />
 
       </div>
