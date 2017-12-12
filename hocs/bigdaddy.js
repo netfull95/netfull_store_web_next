@@ -27,7 +27,8 @@ const bigdaddy = OurChildComponent => {
             <link rel="stylesheet" href="static/css/owl.theme.default.min.css" />
             <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" />
             <link href="https://fonts.googleapis.com/css?family=Lato:400,400italic" rel="stylesheet" />
-            <link rel="stylesheet" href="static/css/font-awesome.min.css" />
+            {/*<link rel="stylesheet" href="static/css/font-awesome.min.css" />*/}
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
           </Head>
           <LocaleProvider locale={vi}>
             <MainLayout>

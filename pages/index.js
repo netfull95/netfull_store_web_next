@@ -35,7 +35,7 @@ class Index extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ marginTop: 38 }}>
         <div className="owl-carousel">
           <div><img src="http://wp.nootheme.com/umbra/wp-content/uploads/homeslider1.jpg" /></div>
           <div><img src="http://wp.nootheme.com/umbra/wp-content/uploads/Home-V1-_-Slide-2.jpg" /></div>
