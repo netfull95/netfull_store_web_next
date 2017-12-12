@@ -12,8 +12,9 @@
     "build-scss": "node-sass static/sass/global.scss static/dist/global.css",
     "build-scss:watch": "node-sass -w static/sass/ -o static/dist/",
     "dev": "NODE_ENV=devolopment SESSION_SECRET=reactnextboilerplate nodemon --watch server.js & npm run build-scss:watch",
-    "start": "npm run build-deploy && NODE_ENV=production SESSION_SECRET=reactnextboilerplate node .dist/server.js",
-    "analyze": "cross-env ANALYZE=1 next build"
+    "start": "npm run build-scss & NODE_ENV=production node server.js",
+    "analyze": "cross-env ANALYZE=1 next build",
+    "heroku-postbuild": "next build"
   },
   "author": "",
   "license": "ISC",
