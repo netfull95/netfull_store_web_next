@@ -21,6 +21,8 @@ class Index extends React.Component {
 
   componentDidMount() {
     $(document).ready(function(){
+      console.log("owl", $(".owl-carousel"));
+      console.log("owl", $(".owl-carousel").owlCarousel);
       $(".owl-carousel").owlCarousel({
         animateOut: 'fadeOut',
         // animateIn: 'flipInX',
