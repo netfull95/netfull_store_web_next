@@ -83,6 +83,11 @@ module.exports = {
       }))
     }
 
+    config.plugins.push(new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    }))
+
     config.plugins.push(new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /vi|en|lo/));
 
     return config;
