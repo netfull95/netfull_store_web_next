@@ -29,6 +29,7 @@ const bigdaddy = OurChildComponent => {
             <link href="https://fonts.googleapis.com/css?family=Lato:400,400italic" rel="stylesheet" />
             {/*<link rel="stylesheet" href="static/css/font-awesome.min.css" />*/}
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
           </Head>
           <LocaleProvider locale={vi}>
             <MainLayout>
@@ -37,6 +38,8 @@ const bigdaddy = OurChildComponent => {
           </LocaleProvider>
           <style dangerouslySetInnerHTML={{ __html: OurChildComponent.info.style }} />
           <script src="static/js/jquery-3.2.1.min.js"></script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.plugin.min.js"></script>
+          <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countdown/2.0.2/jquery.countdown.min.js"></script>
           <script src="static/js/owl.carousel.min.js"></script>
         </div>
       )

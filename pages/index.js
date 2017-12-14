@@ -1,6 +1,8 @@
 import React from 'react'
 import { Button, Icon } from 'antd'
 
+import SectionListImages from 'components/SectionListImages'
+import SectionSale from 'components/SectionSale'
 import SectionGridPost from 'components/SectionGridPost'
 import SectionSubscribeAndFeedback from 'components/SectionSubscribeAndFeedback'
 import SectionGridImages from 'components/SectionGridImages'
@@ -31,8 +33,6 @@ class Index extends React.Component {
            "<span class='is-carousel is-carousel-next'>></span>"
         ]
       });
-      // $( ".owl-prev").html('<i class="fa fa-chevron-left"></i>');
-      // $( ".owl-next").html('<i class="fa fa-chevron-right"></i>');
     });
 
   }
@@ -49,7 +49,9 @@ class Index extends React.Component {
         <SectionBanners />
         <SectionGridImages />
         <SectionProductListItem />
+        <SectionSale />
         <SectionGridPost />
+        <SectionListImages />
         <SectionSubscribeAndFeedback />
 
       </div>

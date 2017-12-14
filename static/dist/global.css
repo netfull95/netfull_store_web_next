@@ -4,6 +4,8 @@
     flex: 1; }
   .is-flex__space-between {
     justify-content: space-between; }
+  .is-flex__space-around {
+    justify-content: space-around; }
   .is-flex__center {
     justify-content: center; }
   .is-flex__start {
@@ -296,7 +298,7 @@ body {
     background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/bg_test2.jpg?id=726); }
 
 .zg-gridpost {
-  margin: 85px; }
+  margin: 85px auto !important; }
   .zg-gridpost--row {
     height: 358px; }
   .zg-gridpost__image {
@@ -331,3 +333,72 @@ body {
     border-radius: 20px; }
     .zg-gridpost--button:hover {
       background-color: #eeeeee; }
+
+.zg-sale--title {
+  font-size: 120px;
+  color: #474b71;
+  text-transform: uppercase; }
+
+.zg-sale--discount {
+  text-align: center;
+  width: 50%; }
+  .zg-sale--discount img {
+    vertical-align: middle; }
+  .zg-sale--discount p {
+    margin-top: 10px; }
+
+.zg-sale--carousel {
+  margin-top: 30px; }
+
+.zg-sale-section {
+  height: 727px;
+  background-color: #fff; }
+  .zg-sale-section:first-child {
+    background-image: url("http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/bg_countdow.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .zg-sale-section:last-child {
+    background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/bg1.png?id=337) !important; }
+  .zg-sale-section__inner {
+    max-width: 70%;
+    align-items: center;
+    text-align: center; }
+
+.zg-sale--count-down {
+  align-items: center;
+  width: 50%; }
+  .zg-sale--count-down h1 {
+    letter-spacing: 1px;
+    font-size: 40px;
+    color: #fff; }
+  .zg-sale--count-down p {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 30px; }
+  .zg-sale--count-down a {
+    color: rgba(0, 0, 0, 0.65);
+    margin-top: 50px;
+    border-radius: 25px;
+    background-color: #f8f8f8;
+    padding: 10px 40px; }
+    .zg-sale--count-down a:hover {
+      color: #fff;
+      background-color: #4666a3; }
+
+.zg-ilist {
+  padding: 60px 0;
+  background-color: #fff;
+  margin-top: 20px; }
+  .zg-ilist--item {
+    max-width: 20%;
+    margin: 15px;
+    overflow: hidden; }
+    .zg-ilist--item img {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      transition: all 0.4s ease 0s;
+      transform: translate3D(0, 0, 0); }
+      .zg-ilist--item img:hover {
+        transform: scale(1.3); }

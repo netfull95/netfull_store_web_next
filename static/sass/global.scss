@@ -206,7 +206,7 @@ body {
 
 
 .zg-gridpost {
-  margin: 85px;
+  margin: 85px auto !important;
 
   &--row {
     height: 358px;
@@ -255,6 +255,105 @@ body {
 
     &:hover {
       background-color: #eeeeee;
+    }
+  }
+}
+
+.zg-sale {
+  &--title {
+    font-size: 120px;
+    color: #474b71;
+    text-transform: uppercase;
+  }
+
+  &--discount {
+    text-align: center;
+    width: 50%;
+
+    img {
+      vertical-align: middle;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  &--carousel {
+    margin-top: 30px;
+  }
+
+  &-section {
+    height: 727px;
+    background-color: $color-white;
+
+    &:first-child {
+      background-image: url('http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/bg_countdow.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &:last-child {
+      background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/bg1.png?id=337) !important
+    }
+
+    &__inner {
+      max-width: 70%;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &--count-down {
+    align-items: center;
+    width: 50%;
+
+    h1 {
+      letter-spacing: 1px;
+      font-size: 40px;
+      color: $color-white; }
+
+    p {
+      font-size: 18px;
+      color: $color-white;
+      margin-top: 30px; }
+
+    a {
+      color: $color-text;
+      margin-top: 50px;
+      border-radius: 25px;
+      background-color: $color-background;
+      padding: 10px 40px;
+
+      &:hover {
+        color: $color-white;
+        background-color: #4666a3;
+      }
+    }
+  }
+}
+
+.zg-ilist {
+  padding: 60px 0;
+  background-color: $color-white;
+  margin-top: 20px;
+
+  &--item {
+    max-width: 20%;
+    margin: 15px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      transition: all 0.4s ease 0s;
+      transform: translate3D(0, 0, 0);
+
+      &:hover {
+        transform: scale(1.3)
+      }
     }
   }
 }
