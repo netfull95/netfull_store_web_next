@@ -1,8 +1,9 @@
 import { Component } from 'react'
-import bigdaddy from 'hocs/bigdaddy'
+import Router from 'next/router'
 import Link from 'next/link'
 
 import style from './index.scss'
+import bigdaddy from 'hocs/bigdaddy'
 
 class Blog extends Component {
 
@@ -11,15 +12,17 @@ class Blog extends Component {
     style
   }
 
+  blogClick = item => () => Router.push(`/blog/detail?title=${item.title}&src=${item.src}`)
+
   renderBlog = (item, index) => (
     <div className="blog-card" key={index}>
-      <div className="content-featured">
+      <div className="content-featured" onClick={this.blogClick(item)}>
         <img width={870} height="auto" src={item.src} />
       </div>
       <div className="entry-content">
         <h3>{item.title}</h3>
         <p>{des}</p>
-        <Link><a>read more <i className="fa fa-angle-right" /></a></Link>
+        <a onClick={this.blogClick(item)}>read more <i className="fa fa-angle-right" /></a>
       </div>
     </div>
   )
