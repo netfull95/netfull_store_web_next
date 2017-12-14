@@ -35,6 +35,7 @@ class Detail extends Component {
         <div className="blog-container">
           <div className="blog-detail">
             <div className="blog-card">
+              <h1 className="title">{this.props.title}</h1>
               <div className="content-featured">
                 <img width={870} height="auto" src={this.props.src} />
               </div>

@@ -176,6 +176,14 @@
     -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 
+    h1 {
+      width: 100%;
+      padding: 30px;
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: .2px;
+    }
+
     &:hover {
       box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     }
