@@ -11,7 +11,7 @@ const SectionProductListItem = () => (
     </div>
 
     <div className="zg-product--list">
-      <div className="zg-product--item is-clickable" onClick={() => Router.push("/shop/product")}>
+      <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product")}>
         <span className="zg-product--item__sticky">Sale</span>
         <div className="is-vertical-flex is-text-center is-padding-20">
           <h3>HANSEN RO CHAIR</h3>
@@ -25,7 +25,7 @@ const SectionProductListItem = () => (
         </div>
       </div>
 
-      <div className="zg-product--item is-clickable" onClick={() => Router.push("/shop/product")}>
+      <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product")}>
         <div className="is-vertical-flex is-text-center is-padding-20">
           <h3>FLAMINGO CHAIR</h3>
           <span>Armchair</span>
@@ -39,7 +39,7 @@ const SectionProductListItem = () => (
         </div>
       </div>
 
-      <div className="zg-product--item is-clickable" onClick={() => Router.push("/shop/product")}>
+      <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product")}>
         <div className="is-vertical-flex is-text-center is-padding-20">
           <h3>CUBA CHAIR</h3>
           <span>Chairs</span>
@@ -55,7 +55,7 @@ const SectionProductListItem = () => (
     </div>
 
     <div className="zg-product--list">
-      <div className="zg-product--item is-clickable" onClick={() => Router.push("/shop/product")}>
+      <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product")}>
         <div className="is-vertical-flex is-text-center is-padding-20">
           <h3>MODERN RED CHAIR</h3>
           <span>Decor</span>
@@ -68,7 +68,7 @@ const SectionProductListItem = () => (
         </div>
       </div>
 
-      <div className="zg-product--item is-clickable" onClick={() => Router.push("/shop/product")}>
+      <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product")}>
         <div className="is-vertical-flex is-text-center is-padding-20">
           <h3>THE SIGNATURE CHAIR</h3>
           <span>Armchair</span>
@@ -82,7 +82,7 @@ const SectionProductListItem = () => (
         </div>
       </div>
 
-      <div className="zg-product--item is-clickable" onClick={() => Router.push("/shop/product")}>
+      <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product")}>
         <span className="zg-product--item__sticky">Sale</span>
 
         <div className="is-vertical-flex is-text-center is-padding-20">

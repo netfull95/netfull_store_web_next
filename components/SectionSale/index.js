@@ -65,16 +65,16 @@ class SectionSale extends Component {
             <p>There are many variations of passages of Lorem</p>
           </div>
           <div className="zg-sale--carousel is-flex is-flex__space-around is-padding-20">
-            <a href="#" class="hover-device">
+            <a href="#" className="hover-device">
               <img src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/19-150x150.jpg"/> <h4>Blue Wing chair</h4>
             </a>
-            <a href="#" class="hover-device">
+            <a href="#" className="hover-device">
               <img src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/12-150x150.jpg"/> <h4>Blue Wing chair</h4>
             </a>
-            <a href="#" class="hover-device">
+            <a href="#" className="hover-device">
               <img src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/6-150x150.jpg"/> <h4>Blue Wing chair</h4>
             </a>
-            <a href="#" class="hover-device">
+            <a href="#" className="hover-device">
               <img src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/4-150x150.jpg"/> <h4>Blue Wing chair</h4>
             </a>
           </div>

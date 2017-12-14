@@ -8,6 +8,10 @@ class Shop extends Component {
     title: 'Shop'
   }
 
+  componentDidMount() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
+
   render() {
     return(
       <div className="container" style={{ marginBottom: 50 }}>
