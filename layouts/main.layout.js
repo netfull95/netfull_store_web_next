@@ -45,9 +45,9 @@ class MainLayout extends Component {
             <Link href="/shop">
               <a className="menu-item">shop</a>
             </Link>
-            <Link href="/pages">
+            {/*<Link href="/pages">
               <a className="menu-item">pages</a>
-            </Link>
+            </Link>*/}
             <Link href='/contact'>
               <a className="menu-item">contact</a>
             </Link>

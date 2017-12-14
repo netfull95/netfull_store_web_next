@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import Link from 'next/link'
+import Router from "next/router"
 
 import bigdaddy from 'hocs/bigdaddy'
 
@@ -24,7 +25,7 @@ class Shop extends Component {
         <section className="shop-container is-flex is-flex__space-between is-horizontal-res">
           <section className="zg-product is-horizontal-res is-padding-20" style={{ marginRight: 15 }}>
             <div className="zg-product--list">
-              <div className="zg-product--item">
+              <div className="zg-product--item is-clickable" onClick={() => Router.push("/shop/product")}>
                 <span className="zg-product--item__sticky">Sale</span>
                 <div className="is-vertical-flex is-text-center is-padding-20">
                   <h3>HANSEN RO CHAIR</h3>
@@ -38,7 +39,7 @@ class Shop extends Component {
                 </div>
               </div>
 
-              <div className="zg-product--item">
+              <div className="zg-product--item is-clickable" onClick={() => Router.push("/shop/product")}>
                 <div className="is-vertical-flex is-text-center is-padding-20">
                   <h3>FLAMINGO CHAIR</h3>
                   <span>Armchair</span>
@@ -52,7 +53,7 @@ class Shop extends Component {
                 </div>
               </div>
 
-              <div className="zg-product--item">
+              <div className="zg-product--item is-clickable" onClick={() => Router.push("/shop/product")}>
                 <div className="is-vertical-flex is-text-center is-padding-20">
                   <h3>CUBA CHAIR</h3>
                   <span>Chairs</span>
@@ -68,7 +69,7 @@ class Shop extends Component {
             </div>
 
             <div className="zg-product--list">
-              <div className="zg-product--item">
+              <div className="zg-product--item is-clickable" onClick={() => Router.push("/shop/product")}>
                 <div className="is-vertical-flex is-text-center is-padding-20">
                   <h3>MODERN RED CHAIR</h3>
                   <span>Decor</span>
@@ -81,7 +82,7 @@ class Shop extends Component {
                 </div>
               </div>
 
-              <div className="zg-product--item">
+              <div className="zg-product--item is-clickable" onClick={() => Router.push("/shop/product")}>
                 <div className="is-vertical-flex is-text-center is-padding-20">
                   <h3>THE SIGNATURE CHAIR</h3>
                   <span>Armchair</span>
@@ -95,7 +96,7 @@ class Shop extends Component {
                 </div>
               </div>
 
-              <div className="zg-product--item">
+              <div className="zg-product--item is-clickable" onClick={() => Router.push("/shop/product")}>
                 <span className="zg-product--item__sticky">Sale</span>
 
                 <div className="is-vertical-flex is-text-center is-padding-20">
