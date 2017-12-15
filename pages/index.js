@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Icon } from 'antd'
+// import $ from 'jquery'
 
 import SectionListImages from 'components/SectionListImages'
 import SectionSale from 'components/SectionSale'
@@ -22,11 +23,10 @@ class Index extends React.Component {
   componentDidMount() {
     $(document).ready(function(){
 
-      if (typeof $(".owl-carousel").owlCarousel === "undefined") return
+      // if (typeof $(".owl-carousel").owlCarousel === "undefined") return
 
       $(".owl-carousel").owlCarousel({
         animateOut: 'fadeOut',
-        // animateIn: 'flipInX',
         nav:true,
         loop:true,
         items: 1,
