@@ -167,6 +167,9 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 20px; }
+    @media screen and (max-width: 600px) {
+      .zg-product--list {
+        flex-direction: column !important; } }
   .zg-product--item {
     position: relative;
     height: 450px !important;
@@ -175,6 +178,10 @@ body {
     width: 30% !important;
     background-color: #fff;
     overflow: hidden; }
+    @media screen and (max-width: 600px) {
+      .zg-product--item {
+        width: 100% !important;
+        margin-bottom: 15px; } }
     .zg-product--item__sticky {
       width: 100px;
       color: #fff;
@@ -334,6 +341,10 @@ body {
     .zg-gridpost--button:hover {
       background-color: #eeeeee; }
 
+@media screen and (max-width: 750px) {
+  .zg-sale {
+    flex-direction: column !important; } }
+
 .zg-sale--title {
   font-size: 120px;
   color: #474b71;
@@ -353,6 +364,9 @@ body {
 .zg-sale-section {
   height: 727px;
   background-color: #fff; }
+  @media screen and (max-width: 750px) {
+    .zg-sale-section {
+      width: 100% !important; } }
   .zg-sale-section:first-child {
     background-image: url(/static/images/bg_countdow.jpg);
     background-position: center;

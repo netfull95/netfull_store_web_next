@@ -8,17 +8,25 @@ class Shop extends Component {
     title: 'Shop'
   }
 
+  static async getInitialProps(ctx) {
+    let query = ctx.query
+
+    if (query && query.name && data[query.name]) return { product: data[query.name] }
+    return { product: {} }
+  }
+
   componentDidMount() {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
 
   render() {
+    const { name, price, retail, mainImage, image1, image2 } = this.props.product
     return(
       <div className="container" style={{ marginBottom: 50 }}>
         <section className="shop-head">
           <div className="shop-head-container">
             <div className="shop-head-content">
-              <h1 className="title">Chair</h1>
+              <h1 className="title">{name}</h1>
               <p style={{ marginBottom: 15 }}>Shop through our latest selection of Armchair and Sofa Umbra design.</p>
               <Link href="/"><a style={{ color: '#fff' }}><i className="fa fa-home" />Home</a></Link>
             </div>
@@ -28,19 +36,19 @@ class Shop extends Component {
         <section className="zg-pdetail is-flex is-flex__space-between is-padding-25" style={{ height: '580px', backgroundColor: '#fff' }}>
           <div className="zg-pdetail--images" style={{ width: '55%', padding: '25px', display: 'flex' }}>
             <div style={{ width: '80%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <img width="inherit" height="auto" src="/static/images/3-300x300.jpg" />
+              <img width="inherit" height="auto" src={mainImage} />
             </div>
 
             <div className="zg-pdetail--variant" style={{ display: 'flex', flexDirection: 'column', width: '20%', justifyContent: 'center' }}>
-              <img style={{ width: 'inherit' }} src="/static/images/4-300x300.jpg" />
-              <img width="100%" src="/static/images/6-300x300.jpg" />
+              <img style={{ width: 'inherit' }} src={image1} />
+              <img width="100%" src={image2} />
             </div>
           </div>
 
           <div className="zg-pdetail--detail" style={{ width: '45%', padding: "20px 40px 20px 0" }}>
             <div className="zg-pdetail--title">
-              <h2>FLAMINGO CHAIR</h2>
-              <div style={{ color: "#d2a637", fontSize: 14, marginTop: 15 }}>$211.00 <strong style={{ fontSize: 18 }}>$199.00</strong></div>
+              <h2>{name}</h2>
+              <div style={{ color: "#d2a637", fontSize: 14, marginTop: 15 }}>{retail} <strong style={{ fontSize: 18 }}>{price}</strong></div>
               <div style={{ padding: "20px 0 30px", borderTop: "1px solid #eeeeee", borderBottom: "1px solid #eeeeee", marginTop: 20, fontSize: 12 }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae tortor urna. Mauris non tincidunt ipsum, vel dignissim ipsum. Morbi erat sapien, hendrerit ut convallis eu, pretium eleifend sapien
               </div>
@@ -150,6 +158,57 @@ class Shop extends Component {
         </section>
       </div>
     )
+  }
+}
+
+const data = {
+  product1: {
+    name: "FLAMINGO CHAIR",
+    price: "$199.00",
+    retail: "$211.00",
+    mainImage: "/static/images/3-300x300.jpg",
+    image1: "/static/images/4-300x300.jpg",
+    image2: "/static/images/6-300x300.jpg"
+  },
+  product2: {
+    name: "HANSEN RO CHAIR",
+    price: "$199.00",
+    retail: "$211.00",
+    mainImage: "/static/images/17-300x300.jpg",
+    image1: "/static/images/4-300x300.jpg",
+    image2: "/static/images/6-300x300.jpg"
+  },
+  product3: {
+    name: "CUBA CHAIR",
+    price: "$150.00",
+    retail: "$200.00",
+    mainImage: "/static/images/10-300x300.jpg",
+    image1: "/static/images/4-300x300.jpg",
+    image2: "/static/images/6-300x300.jpg"
+  },
+  product4: {
+    name: "MODERN RED CHAIR",
+    price: "$219.00",
+    retail: "$300.00",
+    mainImage: "/static/images/4-300x300.jpg",
+    image1: "/static/images/4-300x300.jpg",
+    image2: "/static/images/6-300x300.jpg"
+  },
+  product5: {
+    name: "THE SIGNATURE CHAIR",
+    price: "$199.00",
+    retail: "$211.00",
+    mainImage: "/static/images/fh429_walnut-oil_sif95_side-300x300.jpg",
+    image1: "/static/images/4-300x300.jpg",
+    image2: "/static/images/6-300x300.jpg"
+  },
+  product6: {
+    name: "EGG CHAIR",
+    price: "$199.00",
+    retail: "$211.00",
+    mainImage: "/static/images/3-300x300.jpg",
+    image1: "/static/images/4-300x300.jpg",
+    image2: "/static/images/6-300x300.jpg"
   }
 }
 

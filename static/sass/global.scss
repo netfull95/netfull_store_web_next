@@ -16,6 +16,10 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column !important;
+    }
   }
 
   &--item {
@@ -26,6 +30,11 @@ body {
     width: 30% !important;
     background-color: $color-white;
     overflow: hidden;
+
+    @media screen and (max-width: 600px) {
+      width: 100% !important;
+      margin-bottom: 15px;
+    }
 
     &__sticky {
       width: 100px;
@@ -260,6 +269,10 @@ body {
 }
 
 .zg-sale {
+  @media screen and (max-width: 750px) {
+    flex-direction: column !important;
+  }
+
   &--title {
     font-size: 120px;
     color: #474b71;
@@ -286,6 +299,11 @@ body {
   &-section {
     height: 727px;
     background-color: $color-white;
+
+    @media screen and (max-width: 750px) {
+      width: 100% !important;
+    }
+
 
     &:first-child {
       background-image: url(/static/images/bg_countdow.jpg);
