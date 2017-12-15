@@ -18,7 +18,7 @@ const SectionProductListItem = () => (
           <span>Armchair</span>
         </div>
         <div className="zg-product--item__carousel">
-          <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/17-300x300.jpg" />
+          <img width="300" height="300" src="/static/images/17-300x300.jpg" />
         </div>
         <div className="zg-product--item__price">
           $300.00
@@ -32,7 +32,7 @@ const SectionProductListItem = () => (
         </div>
 
         <div className="zg-product--item__carousel">
-          <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/6-300x300.jpg" />
+          <img width="300" height="300" src="/static/images/6-300x300.jpg" />
         </div>
         <div className="zg-product--item__price">
           $450.00
@@ -46,7 +46,7 @@ const SectionProductListItem = () => (
         </div>
 
         <div className="zg-product--item__carousel">
-          <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/10-300x300.jpg" />
+          <img width="300" height="300" src="/static/images/10-300x300.jpg" />
         </div>
         <div className="zg-product--item__price">
           $200.00
@@ -61,7 +61,7 @@ const SectionProductListItem = () => (
           <span>Decor</span>
         </div>
         <div className="zg-product--item__carousel">
-          <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/4-300x300.jpg" />
+          <img width="300" height="300" src="/static/images/4-300x300.jpg" />
         </div>
         <div className="zg-product--item__price">
           $300.00
@@ -75,7 +75,7 @@ const SectionProductListItem = () => (
         </div>
 
         <div className="zg-product--item__carousel">
-          <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/fh429_walnut-oil_sif95_side-300x300.jpg" />
+          <img width="300" height="300" src="/static/images/fh429_walnut-oil_sif95_side-300x300.jpg" />
         </div>
         <div className="zg-product--item__price">
           $450.00
@@ -91,7 +91,7 @@ const SectionProductListItem = () => (
         </div>
 
         <div className="zg-product--item__carousel">
-          <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/3-300x300.jpg" />
+          <img width="300" height="300" src="/static/images/3-300x300.jpg" />
         </div>
         <div className="zg-product--item__price">
           $200.00

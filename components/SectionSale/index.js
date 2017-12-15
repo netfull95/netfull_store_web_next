@@ -58,7 +58,7 @@ class SectionSale extends Component {
         <div className="zg-sale-section zg-sale--discount">
           <div>
             <h3 className="zg-sale--title">sale up 50%</h3>
-            <img src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/selling_Img.png" />
+            <img src="/static/images/selling_Img.png" />
           </div>
           <div>
             <h3>FRITZ HANSEN BLUE SOFA</h3>
@@ -66,16 +66,16 @@ class SectionSale extends Component {
           </div>
           <div className="zg-sale--carousel is-flex is-flex__space-around is-padding-20">
             <a href="#" className="hover-device">
-              <img src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/19-150x150.jpg"/> <h4>Blue Wing chair</h4>
+              <img src="/static/images/19-150x150.jpg"/> <h4>Blue Wing chair</h4>
             </a>
             <a href="#" className="hover-device">
-              <img src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/12-150x150.jpg"/> <h4>Blue Wing chair</h4>
+              <img src="/static/images/12-150x150.jpg"/> <h4>Blue Wing chair</h4>
             </a>
             <a href="#" className="hover-device">
-              <img src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/6-150x150.jpg"/> <h4>Blue Wing chair</h4>
+              <img src="/static/images/6-150x150.jpg"/> <h4>Blue Wing chair</h4>
             </a>
             <a href="#" className="hover-device">
-              <img src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/4-150x150.jpg"/> <h4>Blue Wing chair</h4>
+              <img src="/static/images/4-150x150.jpg"/> <h4>Blue Wing chair</h4>
             </a>
           </div>
         </div>

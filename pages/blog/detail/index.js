@@ -88,47 +88,47 @@ class Detail extends Component {
             <div className="item menu categories">
               <h4>blog categories</h4>
               <ul>
-                <li><a href="http://wp.nootheme.com/umbra/category/bag-trend-alert/">Bag Trend Alert</a> (3)</li>
-                <li><a href="http://wp.nootheme.com/umbra/category/furniture-tips/">Furniture Tips</a> (3)</li>
-                <li><a href="http://wp.nootheme.com/umbra/category/inspired-ideas/">Inspired Ideas</a> (3)</li>
-                <li><a href="http://wp.nootheme.com/umbra/category/interior-trends/">Interior Trends</a> (3)</li>
+                <li><a href="#">Bag Trend Alert</a> (3)</li>
+                <li><a href="#">Furniture Tips</a> (3)</li>
+                <li><a href="#">Inspired Ideas</a> (3)</li>
+                <li><a href="#">Interior Trends</a> (3)</li>
               </ul>
             </div>
             <div className="item menu">
               <h4>recent posts</h4>
               <ul>
                 <li>
-                  <a href="http://wp.nootheme.com/umbra/2016/05/09/summer-is-calling-sophie-hulme-citrus-fruit-tote/">Summer is Calling: Sophie Hulme Citrus Fruit Tote</a>
+                  <a href="#">Summer is Calling: Sophie Hulme Citrus Fruit Tote</a>
                 </li>
                 <li>
-                  <a href="http://wp.nootheme.com/umbra/2016/05/09/the-new-marc-jacobs-gotham-saddle-bag/">The New Marc Jacobs Gotham Saddle Bag Black</a>
+                  <a href="#">The New Marc Jacobs Gotham Saddle Bag Black</a>
                 </li>
                 <li>
-                  <a href="http://wp.nootheme.com/umbra/2016/05/09/spring-color-bag-trends-summer-2016/">Spring Color Bag Trends Summer 2016</a>
+                  <a href="#">Spring Color Bag Trends Summer 2016</a>
                 </li>
                 <li>
-                  <a href="http://wp.nootheme.com/umbra/2016/05/04/freshen-the-bed-in-a-beautiful-way/">Freshen The Bed in a Beautiful Way</a>
+                  <a href="#">Freshen The Bed in a Beautiful Way</a>
                 </li>
                 <li>
-                  <a href="http://wp.nootheme.com/umbra/2016/05/04/create-gallery-walls-in-3-fun-steps/">Create Gallery Walls in 3 Fun Steps</a>
+                  <a href="#">Create Gallery Walls in 3 Fun Steps</a>
                 </li>
               </ul>
             </div>
             <div className="item blog-tags">
               <h4>blog tag</h4>
               <div>
-                <a href="http://wp.nootheme.com/umbra/tag/accessories/" className="tag-link">accessories</a>
-                <a href="http://wp.nootheme.com/umbra/tag/bags/" className="tag-link">bags</a>
-                <a href="http://wp.nootheme.com/umbra/tag/bedroom/" className="tag-link">Bedroom</a>
-                <a href="http://wp.nootheme.com/umbra/tag/crafts/" className="tag-link">crafts</a>
-                <a href="http://wp.nootheme.com/umbra/tag/decorating/" className="tag-link">decorating</a>
-                <a href="http://wp.nootheme.com/umbra/tag/furnishing/" className="tag-link">furnishing</a>
-                <a href="http://wp.nootheme.com/umbra/tag/inspiring/" className="tag-link">inspiring</a>
-                <a href="http://wp.nootheme.com/umbra/tag/insprired-ideas/" className="tag-link">insprired ideas</a>
-                <a href="http://wp.nootheme.com/umbra/tag/interior-trends/" className="tag-link">Interior Trends</a>
-                <a href="http://wp.nootheme.com/umbra/tag/living-room/" className="tag-link">living room</a>
-                <a href="http://wp.nootheme.com/umbra/tag/tips/" className="tag-link">tips</a>
-                <a href="http://wp.nootheme.com/umbra/tag/trends/" className="tag-link">trends</a>
+                <a href="#" className="tag-link">accessories</a>
+                <a href="#" className="tag-link">bags</a>
+                <a href="#" className="tag-link">Bedroom</a>
+                <a href="#" className="tag-link">crafts</a>
+                <a href="#" className="tag-link">decorating</a>
+                <a href="#" className="tag-link">furnishing</a>
+                <a href="#" className="tag-link">inspiring</a>
+                <a href="#" className="tag-link">insprired ideas</a>
+                <a href="#" className="tag-link">Interior Trends</a>
+                <a href="#" className="tag-link">living room</a>
+                <a href="#" className="tag-link">tips</a>
+                <a href="#" className="tag-link">trends</a>
               </div>
             </div>
             <div className="item ig-images" style={{ borderBottom: 0 }}>

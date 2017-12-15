@@ -28,12 +28,12 @@ class Shop extends Component {
         <section className="zg-pdetail is-flex is-flex__space-between is-padding-25" style={{ height: '580px', backgroundColor: '#fff' }}>
           <div className="zg-pdetail--images" style={{ width: '55%', padding: '25px', display: 'flex' }}>
             <div style={{ width: '80%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-              <img width="100%" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/6.jpg" />
+              <img width="inherit" height="auto" src="/static/images/3-300x300.jpg" />
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', width: '20%', justifyContent: 'center' }}>
-              <img width="100%" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/6.jpg" />
-              <img width="100%" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/6.jpg" />
+            <div className="zg-pdetail--variant" style={{ display: 'flex', flexDirection: 'column', width: '20%', justifyContent: 'center' }}>
+              <img style={{ width: 'inherit' }} src="/static/images/4-300x300.jpg" />
+              <img width="100%" src="/static/images/6-300x300.jpg" />
             </div>
           </div>
 
@@ -108,7 +108,7 @@ class Shop extends Component {
                     <span>Decor</span>
                   </div>
                   <div className="zg-product--item__carousel">
-                    <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/4-300x300.jpg" />
+                    <img width="300" height="300" src="/static/images/4-300x300.jpg" />
                   </div>
                   <div className="zg-product--item__price">
                     $300.00
@@ -122,7 +122,7 @@ class Shop extends Component {
                   </div>
 
                   <div className="zg-product--item__carousel">
-                    <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/fh429_walnut-oil_sif95_side-300x300.jpg" />
+                    <img width="300" height="300" src="/static/images/fh429_walnut-oil_sif95_side-300x300.jpg" />
                   </div>
                   <div className="zg-product--item__price">
                     $450.00
@@ -138,7 +138,7 @@ class Shop extends Component {
                   </div>
 
                   <div className="zg-product--item__carousel">
-                    <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/3-300x300.jpg" />
+                    <img width="300" height="300" src="/static/images/3-300x300.jpg" />
                   </div>
                   <div className="zg-product--item__price">
                     $200.00

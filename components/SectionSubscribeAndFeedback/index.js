@@ -23,7 +23,7 @@ class SectionSubscribeAndFeedback extends Component {
           <div className="zg-subfee--feedback-image zg-subfee__inner zg-subfee--wrapper">
             <i className="fa fa-quote-left icon-quote-left"></i>
             <div className="zg-subfee--detail is-vertical-flex">
-              <img src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/team7-100x100.jpg"  />
+              <img src="/static/images/team7-100x100.jpg"  />
 
               <span style={{ textAlign: 'center', margin: "25px auto", maxWidth: 400 }}>
                 <span className="testimonial-author">

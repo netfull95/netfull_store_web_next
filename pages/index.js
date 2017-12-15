@@ -44,9 +44,9 @@ class Index extends React.Component {
     return (
       <div>
         <div className="owl-carousel">
-          <div><img src="http://wp.nootheme.com/umbra/wp-content/uploads/homeslider1.jpg" /></div>
-          <div><img src="http://wp.nootheme.com/umbra/wp-content/uploads/Home-V1-_-Slide-2.jpg" /></div>
-          <div><img src="http://wp.nootheme.com/umbra/wp-content/uploads/Home-V1-Slide-3.jpg" /></div>
+          <div><img src="/static/images/homeslider1.jpg" /></div>
+          <div><img src="/static/images/Home-V1-_-Slide-2.jpg" /></div>
+          <div><img src="/static/images/Home-V1-Slide-3.jpg" /></div>
         </div>
 
         <SectionBanners />
