@@ -82,12 +82,12 @@ class MainLayout extends Component {
         <div className="footer-container">
           <div className="footer">
             <div className="footer-item">
-              <h4 className="title">UMBRA FURNITURE</h4>
+              <h4 className="title">ZEIGET FURNITURE</h4>
               <div className="detail">
-                <p style={{ marginBottom: 20 }}>We are a global housewares product design company. We bring thought and creativity to everyday items through original design.</p>
-                <span><span className="first-char">A</span> 001 Milacian Crest Street, Paris France</span>
+                <p style={{ marginBottom: 20 }}>We are a local housewares product design company. We bring thought and creativity to everyday items through original design.</p>
+                <span><span className="first-char">A</span> Truc khe, Dong Da, Hanoi</span>
                 <span><span className="first-char">T</span> +(084) 888 - 6789</span>
-                <span><span className="first-char">M</span>  Contact@Umbra.com</span>
+                <span><span className="first-char">M</span>  Contact@Zeiget.com</span>
               </div>
             </div>
 

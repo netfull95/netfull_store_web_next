@@ -48,7 +48,7 @@ class Contact extends Component {
               <h3>Let's have a chat!</h3>
               <div className="des">
                 <div><span className="des">T</span>1-847-555-5555</div>
-                <div><span className="des">M</span>Contact@umbra.com</div>
+                <div><span className="des">M</span>Contact@ZEIGET.com</div>
               </div>
             </div>
           </div>

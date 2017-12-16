@@ -9,7 +9,7 @@ class SectionSubscribeAndFeedback extends Component {
             <div className="zg-subfee--center-block">
               <div className="zg-subfee--title">
                 <h1>SUBSCRIBE EMAIL</h1>
-                <h3>Get latest news & update from Umbra</h3>
+                <h3>Get latest news & update from Zeiget</h3>
               </div>
 
               <div className="zg-subfee--form">
@@ -27,9 +27,9 @@ class SectionSubscribeAndFeedback extends Component {
 
               <span style={{ textAlign: 'center', margin: "25px auto", maxWidth: 400 }}>
                 <span className="testimonial-author">
-                  <strong style={{ textTransform: 'uppercase', marginRight: 10 }}>Johnny Williams</strong> Chief Marketing Officer
+                  <strong style={{ textTransform: 'uppercase', marginRight: 10 }}>ZEIGET</strong> Chief Marketing Officer
                 </span>
-                <p style={{ marginTop: 25 }}>“Umbra&nbsp;is my favorite furniture store. Wonderful, friendly customer services, brand name furniture – my house is full of furniture from Umbra. ”</p>
+                <p style={{ marginTop: 25 }}>“Zeiget&nbsp;is my favorite furniture store. Wonderful, friendly customer services, brand name furniture – my house is full of furniture from ZEIGET. ”</p>
               </span>
 
               {/*<div className="zg-subfee--scroll">

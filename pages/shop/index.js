@@ -16,7 +16,7 @@ class Shop extends Component {
           <div className="shop-head-container">
             <div className="shop-head-content">
               <h1 className="title">Shop</h1>
-              <p style={{ marginBottom: 15 }}>Shop through our latest selection of Armchair and Sofa Umbra design.</p>
+              <p style={{ marginBottom: 15 }}>Shop through our latest selection of Armchair and Sofa ZEIGET design.</p>
               <Link href="/"><a style={{ color: '#fff' }}><i className="fa fa-home" />Home</a></Link>
             </div>
           </div>
