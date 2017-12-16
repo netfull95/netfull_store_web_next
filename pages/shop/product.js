@@ -1,6 +1,9 @@
 import { Component } from 'react'
 import Link from 'next/link'
+import { findIndex } from 'lodash'
+import Router from 'next/router'
 
+import Notification from 'components/Notification'
 import bigdaddy from 'hocs/bigdaddy'
 
 class Shop extends Component {
@@ -19,8 +22,46 @@ class Shop extends Component {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
 
+  handleAddToCart = () => {
+    let afterAdd
+
+    let cart = localStorage.getItem("cart")
+    console.log("cart in ls", cart);
+
+    if (!cart) {
+      console.log("not cart");
+      let product = this.props.product
+      product.quantity = 1
+      afterAdd = [product]
+      console.log("fta", afterAdd);
+      localStorage.setItem("cart", JSON.stringify(afterAdd))
+    } else {
+      let cartObject = JSON.parse(cart)
+      console.log("cart after parse", cartObject);
+
+      let existed = findIndex(cartObject, ele => ele.name === this.props.product.name)
+      console.log("is existed?", existed);
+
+      if (existed >= 0) {
+        console.log("cartObjectc ", cartObject);
+        cartObject[existed].quantity = cartObject[existed].quantity + 1
+        localStorage.setItem("cart", JSON.stringify(cartObject))
+        Notification.success("Success!")
+      } else {
+        let product = this.props.product
+        product.quantity = 1
+        cartObject.push(product)
+        localStorage.setItem("cart", JSON.stringify(cartObject))
+        Notification.success("Success!")
+      }
+
+    }
+    Router.push("/cart")
+  }
+
   render() {
     const { name, price, retail, mainImage, image1, image2 } = this.props.product
+    console.log("hi");
     return(
       <div className="container" style={{ marginBottom: 50 }}>
         <section className="shop-head">
@@ -55,7 +96,10 @@ class Shop extends Component {
               <div style={{ padding: "20px 0", borderBottom: "1px solid #eeeeee" }}>
                 <div style={{ fontColor: "#77a464", fontSize: 12, marginBottom: 15 }}>In Stock</div>
                 <div>
-                  <span style={{ padding: "6px 10px", borderRadius: "25px", backgroundColor: "#4666a3", color: "#fff", fontSize: 13 }}>
+                  <span
+                    onClick={this.handleAddToCart}
+                    className="is-clickable"
+                    style={{ padding: "6px 10px", borderRadius: "25px", backgroundColor: "#4666a3", color: "#fff", fontSize: 13 }}>
                     <i className="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart
                   </span>
                   <span style={{ borderRadius: "50%", marginLeft: 10, padding: "6px 8px", backgroundColor: "#f2f2f2" }}><i className="fa fa-heart-o" aria-hidden="true"></i></span>
@@ -164,7 +208,9 @@ class Shop extends Component {
 const data = {
   product1: {
     name: "FLAMINGO CHAIR",
+    link: "/shop/product?name=product1",
     price: "$199.00",
+    priceNumber: 199,
     retail: "$211.00",
     mainImage: "/static/images/3-300x300.jpg",
     image1: "/static/images/4-300x300.jpg",
@@ -172,8 +218,10 @@ const data = {
   },
   product2: {
     name: "HANSEN RO CHAIR",
+    link: "/shop/product?name=product2",
     price: "$199.00",
     retail: "$211.00",
+    priceNumber: 199,
     mainImage: "/static/images/17-300x300.jpg",
     image1: "/static/images/4-300x300.jpg",
     image2: "/static/images/6-300x300.jpg"
@@ -181,6 +229,8 @@ const data = {
   product3: {
     name: "CUBA CHAIR",
     price: "$150.00",
+    priceNumber: 150,
+    link: "/shop/product?name=product3",
     retail: "$200.00",
     mainImage: "/static/images/10-300x300.jpg",
     image1: "/static/images/4-300x300.jpg",
@@ -188,26 +238,32 @@ const data = {
   },
   product4: {
     name: "MODERN RED CHAIR",
+    link: "/shop/product?name=product4",
     price: "$219.00",
     retail: "$300.00",
+    priceNumber: 219,
     mainImage: "/static/images/4-300x300.jpg",
     image1: "/static/images/4-300x300.jpg",
     image2: "/static/images/6-300x300.jpg"
   },
   product5: {
     name: "THE SIGNATURE CHAIR",
+    priceNumber: 199,
     price: "$199.00",
     retail: "$211.00",
     mainImage: "/static/images/fh429_walnut-oil_sif95_side-300x300.jpg",
     image1: "/static/images/4-300x300.jpg",
+    link: "/shop/product?name=product5",
     image2: "/static/images/6-300x300.jpg"
   },
   product6: {
     name: "EGG CHAIR",
+    priceNumber: 199,
     price: "$199.00",
     retail: "$211.00",
     mainImage: "/static/images/3-300x300.jpg",
     image1: "/static/images/4-300x300.jpg",
+    link: "/shop/product?name=product6",
     image2: "/static/images/6-300x300.jpg"
   }
 }
