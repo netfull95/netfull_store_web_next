@@ -10,10 +10,13 @@ A simple webdesign. In this app:
 - Html.
 - Css.
   + Sử dụng kĩ thuật BEM để naming class. http://getbem.com/
+  
   + Sử dụng preprocessor SASS.http://sass-lang.com/
+  
   + Sử dụng bộ Icons của Font-awesome http://fontawesome.io/icons/
+  
   + Font-family: "Dosis", "Lato", sans-serif. `https://fonts.google.com/specimen/Dosis` `https://fonts.google.com/specimen/Lato`
-  +
+  
 - Javascript.
   + Sử dụng thư viện Reactjs để cấu trúc code. https://reactjs.org/
   + Sử dụng Owl carousel để làm slide images. https://owlcarousel2.github.io/OwlCarousel2/
@@ -27,5 +30,5 @@ Sử dụng localStorage của trình duyệt đê lưu giỏ hàng người dù
 
 - Hosting: https://www.heroku.com/
 - Website: zeitget.herokuapp.com
-- Requirement: Nodejs 7.x.x trở lên. Git. 
+- Requirement: Nodejs 7.x.x trở lên. [Download](https://nodejs.org/en/) và Git. [Download](https://git-scm.com/downloads)
 - Run in local: `npm install` -> `npm install node-sass -g` -> `npm run build` -> `npm start`. Server is running on localhost:8090.
