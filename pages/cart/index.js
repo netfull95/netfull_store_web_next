@@ -136,6 +136,7 @@ class Cart extends Component {
                           >Update cart</span>
                         </span>
                         <span
+                          onClick={() => Router.push("/shop")}
                           className="is-clickable"
                           style={{ color: "#fff",cursor: "pointer", padding: "8px 20px", borderRadius: "25px", border: "1px solid #eeeeee", textAlign: "center", backgroundColor: "#4666a3" }}
                           >Continue Shopping</span>
