@@ -30,5 +30,7 @@ Sử dụng localStorage của trình duyệt đê lưu giỏ hàng người dù
 
 - Hosting: https://www.heroku.com/
 - Website: zeitget.herokuapp.com
-- Requirement: Nodejs 7.x.x trở lên. [Download](https://nodejs.org/en/) và Git. [Download](https://git-scm.com/downloads)
-- Run in local: `npm install` -> `npm install node-sass -g` -> `npm run build` -> `npm start`. Server is running on localhost:8090.
+- Yêu cầu chạy server: Nodejs 7.x.x trở lên. [Download](https://nodejs.org/en/) và Git. [Download](https://git-scm.com/downloads)
+- Sau khi có git và nodejs. Vào thư mục chứa project. Click `chuột phải` -> `git bash here`.
+Trong command line interface. Gõ lệnh `node -v` và `npm -v` để check version của nodejs.
+Sau đó chạy lệnh. `npm install`. Sau đó build file : `npm run build`. Sau khi build. chạy server : `npm start`.
