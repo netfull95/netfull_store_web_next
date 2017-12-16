@@ -12,6 +12,7 @@ const SectionProductListItem = () => (
 
     <div className="zg-product--list">
       <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product?name=product1")}>
+        <span className="zg-product--item__sticky-ani">Buy</span>
         <span className="zg-product--item__sticky">Sale</span>
         <div className="is-vertical-flex is-text-center is-padding-20">
           <h3>HANSEN RO CHAIR</h3>
@@ -26,6 +27,7 @@ const SectionProductListItem = () => (
       </div>
 
       <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product?name=product2")}>
+        <span className="zg-product--item__sticky-ani">Buy</span>
         <div className="is-vertical-flex is-text-center is-padding-20">
           <h3>FLAMINGO CHAIR</h3>
           <span>Armchair</span>
@@ -40,6 +42,7 @@ const SectionProductListItem = () => (
       </div>
 
       <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product?name=product3")}>
+        <span className="zg-product--item__sticky-ani">Buy</span>
         <div className="is-vertical-flex is-text-center is-padding-20">
           <h3>CUBA CHAIR</h3>
           <span>Chairs</span>
@@ -56,6 +59,7 @@ const SectionProductListItem = () => (
 
     <div className="zg-product--list">
       <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product?name=product4")}>
+        <span className="zg-product--item__sticky-ani">Buy</span>
         <div className="is-vertical-flex is-text-center is-padding-20">
           <h3>MODERN RED CHAIR</h3>
           <span>Decor</span>
@@ -69,6 +73,7 @@ const SectionProductListItem = () => (
       </div>
 
       <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product?name=product5")}>
+        <span className="zg-product--item__sticky-ani">Buy</span>
         <div className="is-vertical-flex is-text-center is-padding-20">
           <h3>THE SIGNATURE CHAIR</h3>
           <span>Armchair</span>
@@ -83,6 +88,7 @@ const SectionProductListItem = () => (
       </div>
 
       <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product?name=product6")}>
+        <span className="zg-product--item__sticky-ani">Buy</span>
         <span className="zg-product--item__sticky">Sale</span>
 
         <div className="is-vertical-flex is-text-center is-padding-20">
