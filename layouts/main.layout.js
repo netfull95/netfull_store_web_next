@@ -72,7 +72,7 @@ class MainLayout extends Component {
             <i
               onClick={() => Router.push("/cart")}
               className="fa fa-shopping-bag" />
-            <span className="mention">{this.state.cart.length}</span>
+            <span onClick={() => Router.push("/cart")} className="mention">{this.state.cart.length}</span>
           </div>
         </div>
         <div>
