@@ -7,7 +7,7 @@ import bigdaddy from 'hocs/bigdaddy'
 
 const MyMapComponent = compose(
   withProps({
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
+    googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBsOOTyYI8pLWxAYrHGNJ3TTUm0YGHeFEs&v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `750px`, background: '#f7f7f7', padding: 5, position: 'relative' }} />,
     mapElement: <div style={{ height: `100%` }} />,
