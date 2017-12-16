@@ -35,7 +35,7 @@ class SectionGridPost extends Component {
             </span>
           </div>
 
-          <div className="zg-gridpost__image" style={{ backgroundImage: "url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/33e47c01-854a-4fdb-8d70-a9fee7ba307c1111111222.jpg) !important" }}>
+          <div className="zg-gridpost__image" style={{ backgroundImage: "url(/static/images/33e47c01-854a-4fdb-8d70-a9fee7ba307c1111111222.jpg) !important" }}>
           </div>
         </div>
       </section>

@@ -1,0 +1,53 @@
+.textoverlay {
+  width: 550px;
+  position: absolute;
+
+  &-1 {
+    top: 20%;
+    left: 55%;
+  }
+  &-2 {
+    top: 25%;
+    left: 65%;
+  }
+  &-3 {
+    text-align: center;
+    margin: auto;
+    top: 30%;
+    left: 0;
+    right: 0;
+  }
+
+  &--inner-1 {
+
+    h1 {
+      font-size: calc(3vw + 1vh + 1px)
+    }
+
+    span {
+      font-size: calc(2vw + 1vh - 5px)
+    }
+  }
+
+  &--inner-2 {
+
+    h1 {
+      font-size: calc(2vw + 1vh + 10px)
+    }
+
+    span {
+      font-size: calc(2vw + 1vh - 5px)
+    }
+  }
+
+  &--inner-3 {
+
+    h1 {
+      font-size: calc(2vw + 1vh + 10px)
+    }
+
+    span {
+      font-size: calc(2vw + 1vh - 5px)
+    }
+  }
+}

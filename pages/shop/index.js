@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import Link from 'next/link'
+import Router from "next/router"
 
 import bigdaddy from 'hocs/bigdaddy'
 
@@ -24,42 +25,42 @@ class Shop extends Component {
         <section className="shop-container is-flex is-flex__space-between is-horizontal-res">
           <section className="zg-product is-horizontal-res is-padding-20" style={{ marginRight: 15 }}>
             <div className="zg-product--list">
-              <div className="zg-product--item">
+              <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product?name=product1")}>
                 <span className="zg-product--item__sticky">Sale</span>
                 <div className="is-vertical-flex is-text-center is-padding-20">
                   <h3>HANSEN RO CHAIR</h3>
                   <span>Armchair</span>
                 </div>
                 <div className="zg-product--item__carousel">
-                  <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/17-300x300.jpg" />
+                  <img src="/static/images/17-300x300.jpg" />
                 </div>
                 <div className="zg-product--item__price">
                   $300.00
                 </div>
               </div>
 
-              <div className="zg-product--item">
+              <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product?name=product2")}>
                 <div className="is-vertical-flex is-text-center is-padding-20">
                   <h3>FLAMINGO CHAIR</h3>
                   <span>Armchair</span>
                 </div>
 
                 <div className="zg-product--item__carousel">
-                  <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/6-300x300.jpg" />
+                  <img src="/static/images/6-300x300.jpg" />
                 </div>
                 <div className="zg-product--item__price">
                   $450.00
                 </div>
               </div>
 
-              <div className="zg-product--item">
+              <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product?name=product3")}>
                 <div className="is-vertical-flex is-text-center is-padding-20">
                   <h3>CUBA CHAIR</h3>
                   <span>Chairs</span>
                 </div>
 
                 <div className="zg-product--item__carousel">
-                  <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/10-300x300.jpg" />
+                  <img src="/static/images/10-300x300.jpg" />
                 </div>
                 <div className="zg-product--item__price">
                   $200.00
@@ -68,34 +69,34 @@ class Shop extends Component {
             </div>
 
             <div className="zg-product--list">
-              <div className="zg-product--item">
+              <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product?name=product4")}>
                 <div className="is-vertical-flex is-text-center is-padding-20">
                   <h3>MODERN RED CHAIR</h3>
                   <span>Decor</span>
                 </div>
                 <div className="zg-product--item__carousel">
-                  <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/4-300x300.jpg" />
+                  <img src="/static/images/4-300x300.jpg" />
                 </div>
                 <div className="zg-product--item__price">
                   $300.00
                 </div>
               </div>
 
-              <div className="zg-product--item">
+              <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product?name=product5")}>
                 <div className="is-vertical-flex is-text-center is-padding-20">
                   <h3>THE SIGNATURE CHAIR</h3>
                   <span>Armchair</span>
                 </div>
 
                 <div className="zg-product--item__carousel">
-                  <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/fh429_walnut-oil_sif95_side-300x300.jpg" />
+                  <img src="/static/images/fh429_walnut-oil_sif95_side-300x300.jpg" />
                 </div>
                 <div className="zg-product--item__price">
                   $450.00
                 </div>
               </div>
 
-              <div className="zg-product--item">
+              <div className="zg-product--item is-clickable" onClick={() => typeof window !== "undefined" && window.location.assign("/shop/product?name=product6")}>
                 <span className="zg-product--item__sticky">Sale</span>
 
                 <div className="is-vertical-flex is-text-center is-padding-20">
@@ -104,7 +105,7 @@ class Shop extends Component {
                 </div>
 
                 <div className="zg-product--item__carousel">
-                  <img width="300" height="300" src="http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/3-300x300.jpg" />
+                  <img src="/static/images/3-300x300.jpg" />
                 </div>
                 <div className="zg-product--item__price">
                   $200.00
@@ -125,29 +126,29 @@ class Shop extends Component {
               <div className="item menu categories">
                 <h4>shop categories</h4>
                 <ul>
-                  <li><a href="http://wp.nootheme.com/umbra/category/bag-trend-alert/">Bag Trend Alert</a> (3)</li>
-                  <li><a href="http://wp.nootheme.com/umbra/category/furniture-tips/">Furniture Tips</a> (3)</li>
-                  <li><a href="http://wp.nootheme.com/umbra/category/inspired-ideas/">Inspired Ideas</a> (3)</li>
-                  <li><a href="http://wp.nootheme.com/umbra/category/interior-trends/">Interior Trends</a> (3)</li>
+                  <li><a href="#">Bag Trend Alert</a> (3)</li>
+                  <li><a href="#">Furniture Tips</a> (3)</li>
+                  <li><a href="#">Inspired Ideas</a> (3)</li>
+                  <li><a href="#">Interior Trends</a> (3)</li>
                 </ul>
               </div>
               <div className="item menu">
                 <h4>recent posts</h4>
                 <ul>
                   <li>
-                    <a href="http://wp.nootheme.com/umbra/2016/05/09/summer-is-calling-sophie-hulme-citrus-fruit-tote/">Summer is Calling: Sophie Hulme Citrus Fruit Tote</a>
+                    <a href="#">Summer is Calling: Sophie Hulme Citrus Fruit Tote</a>
                   </li>
                   <li>
-                    <a href="http://wp.nootheme.com/umbra/2016/05/09/the-new-marc-jacobs-gotham-saddle-bag/">The New Marc Jacobs Gotham Saddle Bag Black</a>
+                    <a href="#">The New Marc Jacobs Gotham Saddle Bag Black</a>
                   </li>
                   <li>
-                    <a href="http://wp.nootheme.com/umbra/2016/05/09/spring-color-bag-trends-summer-2016/">Spring Color Bag Trends Summer 2016</a>
+                    <a href="#">Spring Color Bag Trends Summer 2016</a>
                   </li>
                   <li>
-                    <a href="http://wp.nootheme.com/umbra/2016/05/04/freshen-the-bed-in-a-beautiful-way/">Freshen The Bed in a Beautiful Way</a>
+                    <a href="#">Freshen The Bed in a Beautiful Way</a>
                   </li>
                   <li>
-                    <a href="http://wp.nootheme.com/umbra/2016/05/04/create-gallery-walls-in-3-fun-steps/">Create Gallery Walls in 3 Fun Steps</a>
+                    <a href="#">Create Gallery Walls in 3 Fun Steps</a>
                   </li>
                 </ul>
               </div>

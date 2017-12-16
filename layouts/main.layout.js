@@ -2,10 +2,19 @@ import { Component } from 'react'
 import { Layout } from 'antd'
 import { connect } from 'react-redux'
 import Link from 'next/link'
+import Router from 'next/router'
 
 import style from './main.scss'
 
 class MainLayout extends Component {
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      cart: []
+    }
+  }
 
   handleScroll = () => {
     const header = document.getElementById('header')
@@ -28,6 +37,11 @@ class MainLayout extends Component {
 
   componentDidMount() {
     $(window).scroll(this.handleScroll)
+
+    let cart = localStorage.getItem("cart")
+    cart = cart ? JSON.parse(cart) : []
+
+    if (cart && cart.length > 0) this.setState({ cart })
   }
 
   render() {
@@ -45,9 +59,9 @@ class MainLayout extends Component {
             <Link href="/shop">
               <a className="menu-item">shop</a>
             </Link>
-            <Link href="/pages">
+            {/*<Link href="/pages">
               <a className="menu-item">pages</a>
-            </Link>
+            </Link>*/}
             <Link href='/contact'>
               <a className="menu-item">contact</a>
             </Link>
@@ -55,8 +69,10 @@ class MainLayout extends Component {
           <div className="header-tools">
             <i className="fa fa-search" />
             <i className="fa fa-heart-o" />
-            <i className="fa fa-shopping-bag" />
-            <span className="mention">0</span>
+            <i
+              onClick={() => Router.push("/cart")}
+              className="fa fa-shopping-bag" />
+            <span onClick={() => Router.push("/cart")} className="mention">{this.state.cart.length}</span>
           </div>
         </div>
         <div>

@@ -16,6 +16,10 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column !important;
+    }
   }
 
   &--item {
@@ -26,6 +30,25 @@ body {
     width: 30% !important;
     background-color: $color-white;
     overflow: hidden;
+
+    &:hover {
+      .zg-product--item__sticky-ani {
+        width: 100px;
+        color: $color-white;
+        height: 40px;
+        top: 0px;
+        right: 0px;
+        text-align: center;
+        background-color: $color-semi;
+        line-height: 50px;
+        transform: rotate(-45deg) translate(37px, 28px)
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 100% !important;
+      margin-bottom: 15px;
+    }
 
     &__sticky {
       width: 100px;
@@ -40,8 +63,20 @@ body {
       transform: rotate(45deg)
     }
 
+    &__sticky-ani {
+      position: absolute;
+      top: -80px;
+      left: -80px;
+      transition: all 0.6s ease 0s;
+    }
+
     &__carousel {
       margin: auto;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
 
     &__price {
@@ -192,11 +227,11 @@ body {
   }
 
   &--subscribe-image {
-    background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/bg_mailchip.jpg?id=166) !important;
+    background-image: url(/static/images/bg_mailchip.jpg?id=166) !important;
   }
 
   &--feedback-image {
-    background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/bg_test2.jpg?id=726);
+    background-image: url(/static/images/bg_test2.jpg?id=726);
   }
 
   &--feedback {
@@ -217,7 +252,7 @@ body {
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/556d0928028879.5636e8272c43b1111111.jpg)
+    background-image: url(/static/images/556d0928028879.5636e8272c43b1111111.jpg)
   }
 
   &__text {
@@ -260,6 +295,10 @@ body {
 }
 
 .zg-sale {
+  @media screen and (max-width: 750px) {
+    flex-direction: column !important;
+  }
+
   &--title {
     font-size: 120px;
     color: #474b71;
@@ -287,15 +326,20 @@ body {
     height: 727px;
     background-color: $color-white;
 
+    @media screen and (max-width: 750px) {
+      width: 100% !important;
+    }
+
+
     &:first-child {
-      background-image: url('http://wp.nootheme.com/umbra/wp-content/uploads/2016/04/bg_countdow.jpg');
+      background-image: url(/static/images/bg_countdow.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
     }
 
     &:last-child {
-      background-image: url(http://wp.nootheme.com/umbra/wp-content/uploads/2016/05/bg1.png?id=337) !important
+      background-image: url(/static/images/bg1.png?id=337) !important
     }
 
     &__inner {
@@ -360,7 +404,7 @@ body {
 
 .shop-head {
   height: 360px;
-  background-image: url("http://wp.nootheme.com/umbra/wp-content/uploads/shop.jpg");
+  background-image: url(/static/images/shop.jpg);
   background-position: 50% 0px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -608,3 +652,16 @@ body {
     }
   }
 }
+
+.zg-pdetail--images {
+  img {
+    width: inherit !important;
+  }
+}
+
+.zg-pdetail--variant {
+  img {
+    width: 100% !important;
+  }
+}
+

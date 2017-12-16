@@ -3,7 +3,7 @@
 .layout {
   .blog-head {
     height: 360px;
-    background-image: url(/static/images/bg_countdow2.jpg);
+    background-image: url(/static/images/wishlist.jpg);
     background-position: 50% 0px;
     background-size: auto;
     background-repeat: no-repeat;
@@ -364,4 +364,115 @@
       }
     }
   }
+}
+
+
+.zg-cart-list {
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+  &__inner {
+    background-color: $color-white;
+  }
+
+  a {
+    color: $color-text;
+
+    &:hover {
+      color: $color-semi;
+    }
+  }
+
+  &--header {
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    background-color: #4666a3;
+
+    color: $color-white;
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  &--item {
+    position: relative;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+  }
+}
+
+.cart-hover {
+  &:hover {
+    cursor: pointer;
+    background-color: #4666a3;
+    color: $color-white;
+    border-color: #4666a3;
+  }
+}
+
+.zg-cart {
+  &--discount {
+    width: 48%;
+    padding: 25px;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    label {
+      font-size: 16px;
+      font-family: 'Lato', sans-serif;
+      text-transform: uppercase;
+      border-bottom: 0;
+      padding: 0 0 0 10px;
+      display: block;
+      line-height: 16px;
+      border-left: 3px solid $color-semi;
+      color: #555555;
+      font-weight: 500;
+      position: relative;
+      line-height: 0.8;
+    }
+  }
+
+  &--cart-total {
+    width: 48%;
+    padding: 25px;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    label {
+      font-size: 16px;
+      font-family: 'Lato', sans-serif;
+      text-transform: uppercase;
+      border-bottom: 0;
+      padding: 0 0 0 10px;
+      display: block;
+      line-height: 16px;
+      border-left: 3px solid $color-semi;
+      color: #555555;
+      font-weight: 500;
+      position: relative;
+      line-height: 0.8;
+    }
+  }
+
+  &-final {
+    height: 250px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+  }
+}
+
+.cart-input {
+    color: #aaaaaa;
+    border: 1px solid #eeeeee;
+    height: 40px;
+    display: block;
+    width: 100%;
+    padding: 0 20px;
 }
