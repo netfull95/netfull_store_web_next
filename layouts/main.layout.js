@@ -45,25 +45,28 @@ class MainLayout extends Component {
   }
 
   render() {
+    let pathname
+    if (typeof window !== "undefined") pathname = window.location.pathname
+      console.log(pathname);
     return (
       <div className="layout">
         <div className="header" id="header">
           <img src="/static/images/zeit.png" height="45px" width="auto" />
           <div className="header-menu">
             <Link href="/">
-              <a className="menu-item">home</a>
+              <a className={`menu-item ${pathname === "/" ? "menu-item-active" : ""}`}>home</a>
             </Link>
             <Link href="/blog">
-              <a className="menu-item">blog</a>
+              <a className={`menu-item ${pathname === "/blog" ? "menu-item-active" : ""}`}>blog</a>
             </Link>
             <Link href="/shop">
-              <a className="menu-item">shop</a>
+              <a className={`menu-item ${pathname === "/shop" ? "menu-item-active" : ""}`}>shop</a>
             </Link>
             {/*<Link href="/pages">
               <a className="menu-item">pages</a>
             </Link>*/}
             <Link href='/contact'>
-              <a className="menu-item">contact</a>
+              <a className={`menu-item ${pathname === "/contact" ? "menu-item-active" : ""}`}>contact</a>
             </Link>
           </div>
           <div className="header-tools">

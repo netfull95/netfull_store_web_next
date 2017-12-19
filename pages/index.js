@@ -65,7 +65,7 @@ class Index extends React.Component {
           <div>
             <div className="textoverlay textoverlay-3">
               <div className="textoverlay--inner-3">
-                <h1>You Home<br /> Should Tell The Ttory</h1>
+                <h1>You Home<br /> Should Tell The Story</h1>
                 <span>How is your life?</span>
               </div>
             </div>
