@@ -34,3 +34,5 @@ Sử dụng localStorage của trình duyệt đê lưu giỏ hàng người dù
 - Sau khi có git và nodejs. Vào thư mục chứa project. Click `chuột phải` -> `git bash here`.
 Trong command line interface. Gõ lệnh `node -v` và `npm -v` để check version của nodejs.
 Sau đó chạy lệnh. `npm install`. Sau đó build file : `npm run build`. Sau khi build. chạy server : `npm start`.
+- Chạy trên môi trường window: chạy command prompt ở chế độ Administrator.
+`npm install` -> `npm run build` -> `npm run build-scss` -> `npm run start-window`

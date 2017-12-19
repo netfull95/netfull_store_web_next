@@ -10,6 +10,7 @@
     "dev": "NODE_ENV=devolopment SESSION_SECRET=reactnextboilerplate nodemon --watch server.js & npm run build-scss:watch",
     "start": "npm run build-scss & NODE_ENV=production node server.js",
     "analyze": "cross-env ANALYZE=1 next build",
+    "start-window":"cross-env NODE_ENV=production node server.js",
     "heroku-postbuild": "rm -fr ./build & next build"
   },
   "author": "",
@@ -46,6 +47,7 @@
     "babel-plugin-module-resolver": "^3.0.0",
     "babel-plugin-wrap-in-js": "^1.1.1",
     "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.1.1",
     "css-loader": "^0.28.7",
     "glob": "^7.1.2",
     "postcss-easy-import": "^3.0.0",
