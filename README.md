@@ -26,6 +26,21 @@ A simple webdesign. In this app:
 
 Sử dụng localStorage của trình duyệt đê lưu giỏ hàng người dùng.
 
+# Development
+To run this project:
+
+Requires:
+- Nodejs & npm - Install: https://nodejs.vn/
+- Node-sass: `npm install -g node-sass`
+
+### Run production mode in local:
+- In root directory, run: `npm install`
+- Run these commands in order: `npm run build` -> `npm run build-scss` -> `npm run start-window`
+
+### Run development mode in local:
+- In root directory, run: `npm install`
+- Run these commands in order: `npm run build` -> `npm run build-scss` -> `npm run dev`
+
 # Deployment
 
 - Hosting: https://www.heroku.com/
