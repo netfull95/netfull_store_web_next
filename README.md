@@ -30,12 +30,45 @@ Sử dụng localStorage của trình duyệt đê lưu giỏ hàng người dù
 To run this project:
 
 Requires:
-- Nodejs & npm - Install: https://nodejs.vn/
-- Node-sass: `npm install -g node-sass`
+- Nodejs & npm - Install first: https://nodejs.vn/. Check version node: `node -v`, npm: `npm -v`
+- Node-sass: Install: `npm install -g node-sass`
 
-### Run production mode in local:
+### Run production mode in local (window environment):
 - In root directory, run: `npm install`
-- Run these commands in order: `npm run build` -> `npm run build-scss` -> `npm run start-window`
+- Build project: `npm run build`. Result:
+
+```
+$ next build
+> Using external babel configuration
+> Location: "/Users/username/Documents/project/zeiget-next/.babelrc"
+> Using "webpack" config function defined in next.config.js.
+Done in 19.98s.
+```
+
+- Build css: `npm run build-scss`. Result:
+
+```
+$ node-sass static/sass/global.scss static/dist/global.css
+Rendering Complete, saving .css file...
+Wrote CSS to /Users/username/Documents/project/zeiget-next/static/dist/global.css
+Done in 0.84s.
+```
+
+- Start: `npm run start-window`. Result:
+
+```
+$ npm run build-scss && NODE_ENV=production node server.js
+
+> zeiget@1.0.0 build-scss /Users/username/Documents/project/zeiget-next/
+> node-sass static/sass/global.scss static/dist/global.css
+
+Rendering Complete, saving .css file...
+Wrote CSS to /Users/username/Documents/project/zeiget-next/static/dist/global.css
+|> !!!Server is running on http://localhost:8090
+```
+Now you can visit address: http://localhost:8090.
+
+Note: If you are in linux/unix environment. You might change script command in `package.json` to make commands run in order stead of parallel. (Change `&` to `&&` and use command `npm run start` to start server)
 
 ### Run development mode in local:
 - In root directory, run: `npm install`
