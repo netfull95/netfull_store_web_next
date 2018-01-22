@@ -68,11 +68,11 @@ Wrote CSS to /Users/username/Documents/project/zeiget-next/static/dist/global.cs
 ```
 Now you can visit address: http://localhost:8090.
 
-Note: If you are in linux/unix environment. You might change script command in `package.json` to make commands run in order stead of parallel. (Change `&` to `&&` and use command `npm run start` to start server)
+Note: If you are in linux/unix environment. You might change script command in `package.json` to make commands run in order instead of parallel. (Change `&` to `&&` and use command `npm run start` to start server)
 
 ### Run development mode in local:
 - In root directory, run: `npm install`
-- Run these commands in order: `npm run build` -> `npm run build-scss` -> `npm run dev`
+- Run these commands in order: `npm run dev`
 
 # Deployment
 
