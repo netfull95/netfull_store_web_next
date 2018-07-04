@@ -4,17 +4,10 @@ import withRedux from 'next-redux-wrapper';
 
 import reducers from './reducers';
 
-const initStore = (initState = {}) => createStore(
-  reducers,
-  initState,
-  compose(
-    applyMiddleware(thunkMiddleware),
-    typeof window !== 'undefined' && window.devToolsExtension
-        ? window.devToolsExtension()
-        : f => f
-  )
-)
+const composeEnhancers = (typeof window != 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 
-export default (mapStateToProps, actions) => {
+const initStore = (initialState = {}) => createStore(reducers, initialState, composeEnhancers(applyMiddleware(thunkMiddleware)));
+
+export const connect = (mapStateToProps, actions) => {
   return (component) => withRedux(initStore, mapStateToProps, actions)(component);
 }

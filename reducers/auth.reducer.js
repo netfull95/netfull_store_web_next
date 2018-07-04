@@ -1,30 +1,24 @@
 import update from 'immutability-helper'
+import {LOGIN_SUCCESS} from "constant";
 
-import Notification from 'components/Notification'
+// import Notification from 'components/Notification'
 
-const initState = {
-  info: null,
-  loginModalVisible: false,
-  isAuth: false,
-  identity: null
+const initialState = {
+  username: null,
+  phone_number: null,
+  permission: null,
+  name: null,
+  id: null,
+  email: null,
+  address: null,
 }
 
-export default (state = {}, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
-    case 'AUTH_GET_INFO':
-      return update(state, { info: { $set: action.payload } })
-    case 'AUTH_CONTROL_LOGIN_MODAL':
-      return update(state, { loginModalVisible: { $set: action.payload } })
-    case 'AUTH_LOGIN_SUCCESS':
-      Notification.success('Success!')
-      return update(state, {
-        isAuth: { $set: true },
-        loginModalVisible: { $set: false },
-        identity: { $set: action.payload.username }
-      })
-    case 'AUTH_LOGIN_FAILED':
-      return state
+    case 'LOGIN_SUCCESS':
+      return update(state, { $set: action.payload });
     default:
       return state
   }
+  return state;
 }

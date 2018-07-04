@@ -2,16 +2,15 @@ import { Component } from 'react'
 import Head from 'next/head'
 import vi from 'antd/lib/locale-provider/en_US';
 import { LocaleProvider } from 'antd'
-import { connect, bindActionCreators } from 'store';
-import { getAuth } from 'selectors';
 
-import MainLayout from 'layouts/main.layout'
 
-const bigdaddy = OurChildComponent => {
-  class HigherOrderComponent extends Component {
+import ManageLayout from 'layouts/manage.layout'
+
+const justatee = OurChildComponent => {
+  class ManageComponent extends Component {
     static async getInitialProps(ctx) {
       const childProps = OurChildComponent.getInitialProps ? await OurChildComponent.getInitialProps(ctx) : {};
-      return { ...childProps, dispatch: ctx.store.dispatch }
+      return { ...childProps }
     }
 
     componentDidMount() {
@@ -44,22 +43,17 @@ const bigdaddy = OurChildComponent => {
 
           </Head>
           <LocaleProvider locale={vi}>
-            <MainLayout { ...this.props }>
+            <ManageLayout { ...this.props }>
               <OurChildComponent { ...this.props } />
-            </MainLayout>
+            </ManageLayout>
           </LocaleProvider>
           <style dangerouslySetInnerHTML={{ __html: OurChildComponent.info.style }} />
         </div>
       )
     }
   }
-  const mapStateToProps = (state) => {
-    return {
-      auth: getAuth(state)
-    }
-  }
 
-  return connect(mapStateToProps)(HigherOrderComponent);
+  return ManageComponent
 }
 
-export default bigdaddy
+export default justatee

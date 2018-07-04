@@ -157,7 +157,7 @@
 
 body {
   background-color: #f8f8f8 !important;
-  font-family: 'Dosis', sans-serif;
+  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 16px; }
 
@@ -222,7 +222,7 @@ body {
   .zg-product--header, .zg-product--description {
     justify-content: center; }
     .zg-product--header span, .zg-product--description span {
-      font-family: 'Dosis',sans-serif;
+      font-family: sans-serif;
       text-transform: uppercase;
       line-height: 33px;
       padding: 0 25px;
@@ -343,7 +343,7 @@ body {
       color: #d2a637;
       text-transform: uppercase; }
     .zg-gridpost__text h3 {
-      font-family: 'Dosis', sans-serif;
+      font-family: sans-serif;
       font-size: 24px;
       font-weight: 500;
       margin: 20px 0 30px; }
