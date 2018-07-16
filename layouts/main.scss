@@ -17,8 +17,13 @@
     z-index: 999999;
     display: flex;
     justify-content: space-between;
-    padding: 10px 30px;
+    padding: 0 30px;
     background-color: #fff;
+
+    .header-tools {
+      margin-top: 15px;
+      cursor: pointer;
+    }
   }
   .title-manage {
     height: 50px;

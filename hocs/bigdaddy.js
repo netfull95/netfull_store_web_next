@@ -4,6 +4,7 @@ import vi from 'antd/lib/locale-provider/en_US';
 import { LocaleProvider } from 'antd'
 import { connect, bindActionCreators } from 'store';
 import { getAuth } from 'selectors';
+import { loginUserSuccess } from "actions";
 
 import MainLayout from 'layouts/main.layout'
 
@@ -14,8 +15,18 @@ const bigdaddy = OurChildComponent => {
       return { ...childProps, dispatch: ctx.store.dispatch }
     }
 
+    state = {
+      user: {}
+    }
+
+
     componentDidMount() {
+      const { dispatch } = this.props;
       document.body.scrollTop = document.documentElement.scrollTop = 0;
+      let user = localStorage && localStorage.getItem("user_data")
+      user = user ? JSON.parse(user) : {}
+      if (user.name) dispatch(loginUserSuccess(user))
+      this.setState({user})
     }
 
     render() {
@@ -45,7 +56,7 @@ const bigdaddy = OurChildComponent => {
           </Head>
           <LocaleProvider locale={vi}>
             <MainLayout { ...this.props }>
-              <OurChildComponent { ...this.props } />
+              <OurChildComponent { ...this.props } user={this.state.user}/>
             </MainLayout>
           </LocaleProvider>
           <style dangerouslySetInnerHTML={{ __html: OurChildComponent.info.style }} />
@@ -55,7 +66,9 @@ const bigdaddy = OurChildComponent => {
   }
   const mapStateToProps = (state) => {
     return {
-      auth: getAuth(state)
+      auth: state.auth,
+      products: state.product.data,
+      posts: state.post.data,
     }
   }
 

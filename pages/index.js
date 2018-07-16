@@ -12,14 +12,19 @@ import SectionProductListItem from 'components/SectionProductListItem'
 import Notification from 'components/Notification'
 import bigdaddy from 'hocs/bigdaddy'
 import style from './index.scss'
+import { getProductData } from "actions";
 
 class Index extends React.Component {
 
   static info = {
-    title: 'Home',
+    title: 'Trang chủ',
     style
   }
 
+  componentWillMount() {
+    const { dispatch } = this.props;
+    dispatch(getProductData("dashboard"));
+  }
   // componentDidMount() {
   //   $(document).ready(function(){
 
@@ -41,6 +46,8 @@ class Index extends React.Component {
   // }
 
   render() {
+    const { products } = this.props;
+    console.log('products', products);
     return (
       <div>
         <Carousel
@@ -59,20 +66,14 @@ class Index extends React.Component {
 
         <SectionBanners />
         {/*<SectionGridImages />*/}
-        <SectionProductListItem />
-        <SectionSale />
-        <SectionGridPost />
-        <SectionListImages />
-        <SectionSubscribeAndFeedback />
-        <style dangerouslySetInnerHtml={{ __html: style }} />
+        {products ? <SectionProductListItem products={products} /> : null }
+        {/*<SectionSale />*/}
+        {/*<SectionGridPost />*/}
+        {/*<SectionListImages />*/}
+        {/*<SectionSubscribeAndFeedback />*/}
+        {/*<style dangerouslySetInnerHtml={{ __html: style }} />*/}
       </div>
     )
-  }
-}
-
-const mapStateToProps = state => {
-  return {
-    auth: state.auth
   }
 }
 

@@ -1,5 +1,5 @@
 import update from 'immutability-helper'
-import {LOGIN_SUCCESS} from "constant";
+import {LOGIN_SUCCESS, LOGOUT_SUCCESS} from "constant";
 
 // import Notification from 'components/Notification'
 
@@ -17,6 +17,8 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case 'LOGIN_SUCCESS':
       return update(state, { $set: action.payload });
+    case 'LOGOUT_SUCCESS':
+      return update(state, { $set: {}})
     default:
       return state
   }

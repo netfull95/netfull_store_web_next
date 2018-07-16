@@ -17,9 +17,9 @@ const MyMapComponent = compose(
 )((props) =>
   <GoogleMap
     defaultZoom={16}
-    defaultCenter={{ lat: 21.0164772, lng: 105.8076687 }}
+    defaultCenter={{ lat: 20.603818, lng: 105.978933 }}
   >
-    {props.isMarkerShown && <Marker position={{ lat: 21.0164772, lng: 105.8076687 }} onClick={props.onMarkerClick} />}
+    {props.isMarkerShown && <Marker position={{ lat: 20.603818, lng: 105.978933 }} onClick={props.onMarkerClick} />}
   </GoogleMap>
 )
 
@@ -38,40 +38,40 @@ class Contact extends Component {
           <div className="item">
             <i className="fa fa-map-marker" />
             <div>
-              <h3>Visit Our Location</h3>
-              <div className="des">79 Orchard St, New York, United States.</div>
+              <h3>Địa chỉ cửa hàng</h3>
+              <div className="des">Chợ Điệp Sơn, Xã Yên Nam, Duy Tiên, Hà Nam</div>
             </div>
           </div>
           <div className="item">
             <i className="fa fa-comments-o" />
             <div>
-              <h3>Let's have a chat!</h3>
+              <h3>Liên hệ ngay</h3>
               <div className="des">
-                <div><span className="des">T</span>1-847-555-5555</div>
-                <div><span className="des">M</span>Contact@ZEIGET.com</div>
+                <div><span className="des"></span>098-898-1626</div>
+                <div><span className="des"></span>phongtiepds@gmail.com</div>
               </div>
             </div>
           </div>
           <div className="item">
             <i className="fa fa-clock-o" />
             <div className="des">
-              <h3>Working hours</h3>
-              <div>Mon – Fri: 8AM – 10PM</div>
-              <div>Sat: 9AM-8PM</div>
+              <h3>Giờ làm việc</h3>
+              <div>Thứ 2 – Thứ 6: 7AM – 7PM</div>
+              <div>Thứ 7 - Chủ Nhật: 7:30AM - 7:30PM</div>
             </div>
           </div>
         </div>
 
         <div className="form">
-          <h3 className="title">contact us</h3>
-          <div className="des">Leave A Message</div>
+          <h3 className="title">Liên hệ trực tiếp</h3>
+          <div className="des">Vui lòng để lại lời nhắn</div>
           <div style={{ display: 'flex', width: '100%' }}>
-            <input placeholder="Name" style={{ marginRight: 30 }} />
+            <input placeholder="Tên" style={{ marginRight: 30 }} />
             <input placeholder="Email" />
           </div>
-          <input placeholder="Subject" />
-          <textarea style={{ height: 117 }} placeholder="Message" />
-          <div className="send-btn">send message</div>
+          <input placeholder="Tiêu đề" />
+          <textarea style={{ height: 117 }} placeholder="Nội dung" />
+          <div className="send-btn">Gửi tin nhắn</div>
         </div>
       </div>
     )

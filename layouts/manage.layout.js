@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { Layout, Button, Modal, Form, Icon, Input, Checkbox, Tabs, Select, AutoComplete, Tooltip, Row, Col, Menu } from 'antd'
+import { Layout, Button, Modal, Form, Icon, Input, Checkbox, Tabs, Select, AutoComplete, Tooltip, Row, Col, Menu, Dropdown } from 'antd'
 import { connect } from 'react-redux'
 import Link from 'next/link'
 import Router from 'next/router'
@@ -20,6 +20,7 @@ class ManageLayout extends Component {
     this.state = {
       cart: [],
       visible: false,
+      userData: {},
     }
   }
 
@@ -48,12 +49,13 @@ class ManageLayout extends Component {
   }
 
   componentDidMount() {
-    // $(window).scroll(this.handleScroll)
-
-    let cart = localStorage.getItem("cart")
-    cart = cart ? JSON.parse(cart) : []
-
-    if (cart && cart.length > 0) this.setState({ cart })
+    let user = localStorage.getItem("user_data")
+    user = user ? JSON.parse(user) : {}
+    if (user && user.permission == "admin"){
+      this.setState({userData: user})
+    } else {
+      Router.push("/")
+    }
   }
 
   showModal = () => {
@@ -74,17 +76,37 @@ class ManageLayout extends Component {
     });
   }
 
+  handleLogout = (e) => {
+    localStorage.removeItem("user_data")
+    this.setState({
+      userData: {},
+    });
+    Router.push("/")
+  }
+
+  handleClick = (e) => {
+    Router.push(e.key)
+  }
+
+
   render() {
+    const { userData } = this.state;
     let pathname
     if (typeof window !== "undefined") pathname = window.location.pathname
+
+    const menu = (
+      <Menu onClick={this.handleLogout}>
+        <Menu.Item key="logout">Đăng xuất</Menu.Item>
+      </Menu>
+    )
     return (
       <div className="layout-manage">
         <div className="header-manage" id="header">
           <img src="/static/images/phong tiep.png" height="50px" width="140px" style={{marginLeft: 0}}/>
           <div className="header-tools">
-            <div>
-              Username
-            </div>
+            <Dropdown overlay={menu} placement="bottomLeft">
+                <span>{userData && userData.name}</span>
+              </Dropdown>
           </div>
         </div>
         <div style={{height: 883}}>
@@ -92,21 +114,31 @@ class ManageLayout extends Component {
             <Col span={20} order={2} style={{backgroundColor: "#eee"}}>
               {this.props.children}
             </Col>
-            <Col span={4} order={1} style={{backgroundColor: "#404040"}}>
+            <Col span={4} order={1} style={{backgroundColor: "#404040", paddingTop: 20}}>
               <Menu
-                theme={'dark'}
+                selectedKeys={pathname}
                 onClick={this.handleClick}
-                // style={{ width: 300 }}
-                defaultOpenKeys={['sub1']}
-                selectedKeys={[this.state.current]}
                 mode="inline"
+                theme="dark"
               >
-                <Menu.Item key="1"><Icon type="copy" /><span>Đơn hàng</span></Menu.Item>
-                <Menu.Item key="2"><Icon type="user" /><span>Người dùng</span></Menu.Item>
-                <Menu.Item key="3"><Icon type="tablet" /><span>Sản phẩm</span></Menu.Item>
-                <Menu.Item key="4"><Icon type="desktop" /><span>Bài viết</span></Menu.Item>
-                <Menu.Item key="5"><Icon type="database" /><span>Danh mục</span></Menu.Item>
-                <Menu.Item key="6"><Icon type="pie-chart" /><span>Thống kê - báo cáo</span></Menu.Item>
+                <Menu.Item key="/manage/order">
+                  <Icon type="copy" /><span>Đơn hàng</span>
+                </Menu.Item>
+                <Menu.Item key="/manage/user">
+                  <Icon type="user" /><span>Tài khoản</span>
+                  </Menu.Item>
+                <Menu.Item key="/manage/product">
+                  <Icon type="tablet" /><span>Sản phẩm</span>
+                </Menu.Item>
+                <Menu.Item key="/manage/post">
+                  <Icon type="desktop" /><span>Bài viết</span>
+                </Menu.Item>
+                <Menu.Item key="/manage/category">
+                  <Icon type="database" /><span>Danh mục</span>
+                </Menu.Item>
+                <Menu.Item key="/manage/statistic">
+                  <Icon type="pie-chart" /><span>Thống kê - báo cáo</span>
+                </Menu.Item>
               </Menu>
             </Col>
           </Row>

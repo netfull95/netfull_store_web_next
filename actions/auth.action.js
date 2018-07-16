@@ -1,6 +1,6 @@
 // import data from 'data.json'
 import { find } from 'lodash'
-import { LOGIN_SUCCESS } from "constant";
+import { LOGIN_SUCCESS, LOGOUT_SUCCESS } from "constant";
 
 export const authGetInfo = info => {
   return {
@@ -21,6 +21,13 @@ export const authControlLoginModal = value => {
 //   if (matchUser) return { type: 'AUTH_LOGIN_SUCCESS', payload: info }
 //   return { type: 'AUTH_LOGIN_FAILED', payload: null }
 // }
+
+export const logoutUser = () => {
+  return {
+    type: 'LOGOUT_SUCCESS',
+    payload: null
+  }
+}
 
 export const loginUserSuccess = payload => {
   return {

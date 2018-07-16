@@ -2,6 +2,8 @@ import { Component } from 'react'
 import Head from 'next/head'
 import vi from 'antd/lib/locale-provider/en_US';
 import { LocaleProvider } from 'antd'
+import { connect } from 'store';
+// import { getAuth, getProduct } from 'selectors';
 
 
 import ManageLayout from 'layouts/manage.layout'
@@ -52,8 +54,18 @@ const justatee = OurChildComponent => {
       )
     }
   }
+  const mapStateToProps = (state) => {
+    return {
+      auth: state.auth,
+      products: state.product,
+      posts: state.post,
+      users: state.user,
+      categories: state.category,
+      orders: state.order,
+    }
+  }
 
-  return ManageComponent
+  return connect(mapStateToProps)(ManageComponent);
 }
 
 export default justatee

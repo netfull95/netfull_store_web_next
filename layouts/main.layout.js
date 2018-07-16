@@ -1,10 +1,10 @@
 import { Component, PropTypes } from 'react'
-import { Layout, Button, Modal, Form, Icon, Input, Checkbox, Tabs, Select, AutoComplete, Tooltip, Row, Col, notification } from 'antd'
+import { Button, Modal, Form, Icon, Input, Checkbox, Tabs, Select, AutoComplete, Tooltip, Row, Col, notification, Dropdown, Menu } from 'antd'
 import { connect } from 'react-redux'
 import Link from 'next/link'
 import Router from 'next/router'
 import axios from 'axios'
-import {loginUserSuccess} from 'actions';
+import { loginUserSuccess, logoutUser } from 'actions';
 import { isEqual } from "lodash";
 
 import style from './main.scss'
@@ -26,13 +26,29 @@ class RegistrationForm extends React.Component {
     autoCompleteResult: [],
   };
 
-  handleSubmit = (e) => {
+  handleSubmitRegister = (e) => {
+    const {dispatch, handleRegisterSuccess} = this.props;
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        let url = `http://localhost:8880/api/users/register`;
+        let data = JSON.stringify({ userName: values.nickname, password: values.password, name: values.name, email: values.email, phone: `${values.prefix}${values.phone}`, address: values.address })
+        axios.post(url, data,{ headers: { 'Content-Type': 'application/json' }})
+        .then(({ data }) => {
+          if (data.success) {
+            openNotificationWithIcon('success', 'Đăng ký thành công', null)
+            localStorage.setItem("user_data", JSON.stringify(data.data));
+            dispatch(loginUserSuccess(data.data))
+            handleRegisterSuccess(data.data)
+          } else {
+            openNotificationWithIcon('error', 'Đăng ký thất bại', data.message);
+          }
+        })
+        .catch(err => console.log(err))
+      } else {
+        openNotificationWithIcon('error', 'Kiểm tra lại thông tin đăng ký', null);
       }
-    });
+    })
   }
 
   handleConfirmBlur = (e) => {
@@ -108,7 +124,7 @@ class RegistrationForm extends React.Component {
     ));
 
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmitRegister}>
         <FormItem
           {...formItemLayout}
           label={(
@@ -152,6 +168,23 @@ class RegistrationForm extends React.Component {
             }],
           })(
             <Input type="password" onBlur={this.handleConfirmBlur} />
+          )}
+        </FormItem>
+        <FormItem
+          {...formItemLayout}
+          label={(
+            <span>
+              Họ tên&nbsp;
+              <Tooltip title="What do your name?">
+                <Icon type="question-circle-o" />
+              </Tooltip>
+            </span>
+          )}
+        >
+          {getFieldDecorator('name', {
+            rules: [{ required: true, message: 'Please input your name!', whitespace: true }],
+          })(
+            <Input />
           )}
         </FormItem>
         <FormItem
@@ -212,7 +245,7 @@ const WrappedRegistrationForm = Form.create()(RegistrationForm);
 class NormalLoginForm extends React.Component {
 
   handleSubmit = (e) => {
-    const {dispatch} = this.props;
+    const {dispatch, handleloginSuccess} = this.props;
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
@@ -222,8 +255,9 @@ class NormalLoginForm extends React.Component {
         .then(({ data }) => {
           if (data.success) {
             openNotificationWithIcon('success', 'Đăng nhập thành công', null)
-            console.log('11111', data);
+            localStorage.setItem("user_data", JSON.stringify(data.data));
             dispatch(loginUserSuccess(data.data))
+            handleloginSuccess(data.data)
           } else {
             openNotificationWithIcon('error', 'Đăng nhập thất bại', data.message);
           }
@@ -285,20 +319,6 @@ class MainLayout extends Component {
     }
   }
 
-  componentWillMount() {
-    const { auth } = this.props;
-    console.log('props', this.props);
-    this.setState({ username: auth && auth.name })
-  }
-
-  componentWillReceiveProps(nextProps) {
-    console.log( ' asss');
-    if (!isEqual(nextProps.auth, this.props.auth)) {
-      console.log(' vào k');
-      this.setState({username: nextProps.auth && nextProps.auth.name})
-    }
-  }
-
   handleScroll = () => {
     const header = document.getElementById('header')
     const mark = document.getElementById('header-mark')
@@ -321,15 +341,27 @@ class MainLayout extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log( e.target);
+    //
   }
 
   componentDidMount() {
-    // $(window).scroll(this.handleScroll)
+    const localData = JSON.parse(localStorage.getItem("user_data"));
+    if (localData) {
+      this.setState({ username: localData && localData.name })
+    }
 
     let cart = localStorage.getItem("cart")
     cart = cart ? JSON.parse(cart) : []
-
     if (cart && cart.length > 0) this.setState({ cart })
+  }
+
+  handleloginSuccess = (data) => {
+    if (data.permission == "admin") {
+      Router.push("/manage/order")
+    } else {
+      this.handleCancel()
+      this.setState({username: data.name})
+    }
   }
 
   renderLogin() {
@@ -344,11 +376,15 @@ class MainLayout extends Component {
             <div style={{textAlign: "center", marginBottom: 10}}><img src="/static/images/phong tiep.png" height="55px" width="auto"/></div>
             <WrappedNormalLoginForm
               dispatch = {this.props.dispatch}
+              handleloginSuccess={this.handleloginSuccess}
             />
           </TabPane>
           <TabPane tab="Đăng ký" key="2">
             <div style={{textAlign: "center", marginBottom: 10}}><img src="/static/images/phong tiep.png" height="55px" width="auto"/></div>
-            <WrappedRegistrationForm/>
+            <WrappedRegistrationForm
+              dispatch = {this.props.dispatch}
+              handleRegisterSuccess={this.handleloginSuccess}
+            />
           </TabPane>
         </Tabs>
       </Modal>
@@ -373,10 +409,24 @@ class MainLayout extends Component {
     });
   }
 
+  handleLogout = (e) => {
+    const { dispatch } = this.props;
+    dispatch(logoutUser())
+    localStorage.removeItem("user_data")
+    this.setState({
+      username: null,
+    });
+  }
+
   render() {
     const {username} = this.state;
     let pathname
     if (typeof window !== "undefined") pathname = window.location.pathname
+    const menu = (
+      <Menu onClick={this.handleLogout}>
+        <Menu.Item key="logout">Đăng xuất</Menu.Item>
+      </Menu>
+    )
     return (
       <div className="layout">
         <div className="header" id="header">
@@ -389,25 +439,27 @@ class MainLayout extends Component {
               <a className={`menu-item ${pathname === "/shop" ? "menu-item-active" : ""}`}>Cửa hàng</a>
             </Link>
             <Link href="/blog">
-              <a className={`menu-item ${pathname === "/blog" ? "menu-item-active" : ""}`}>blog</a>
+              <a className={`menu-item ${pathname === "/blog" ? "menu-item-active" : ""}`}>Blog</a>
             </Link>
             <Link href='/contact'>
               <a className={`menu-item ${pathname === "/contact" ? "menu-item-active" : ""}`}>Liên hệ</a>
             </Link>
           </div>
           <div className="header-tools">
-            <i
-              onClick={() => Router.push("/cart")}
-              className="fa fa-shopping-bag" />
-            {/*<span onClick={() => Router.push("/cart")} className="mention">{this.state.cart.length}</span>*/}
             {username ?
-              username
+              <Dropdown overlay={menu} placement="bottomLeft">
+                <span>{username}</span>
+              </Dropdown>
             :
               <div>
                 <Button type="primary" style={{marginLeft: 10}} onClick={this.showModal}>Đăng nhập</Button>
                 {this.renderLogin()}
               </div>
             }
+            <i
+              onClick={() => Router.push("/cart")}
+              className="fa fa-shopping-bag" />
+            {<span onClick={() => Router.push("/cart")} className="mention">{this.state.cart.length}</span>}
           </div>
         </div>
         <div>
@@ -450,5 +502,4 @@ function mapStateToProps (state){
   }
 }
 
-// export default nextConnect(mapStateToProps)(MainLayout);
 export default MainLayout
